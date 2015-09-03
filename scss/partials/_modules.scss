@@ -1,0 +1,21 @@
+/********************
+** Homepage
+********************/
+#home{
+	background-color: $c-blue-dark;
+	background-image: url(../images/background_image.png);
+	background-size: cover;
+	background-position: 50% 50%;
+	position: relative;
+	&:after{
+		position: absolute;
+		top: 0;
+		left: 0;
+		content: "";
+		display: block;
+		height: 100%;
+		width: 100%;
+		background-color: $c-blue-dark;
+		opacity: .4;
+	}
+}

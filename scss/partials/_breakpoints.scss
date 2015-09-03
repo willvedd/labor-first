@@ -1,0 +1,46 @@
+/********************
+** Breakpoints
+********************/
+
+$bp-xsmall:           321;
+$bp-small:            769;
+$bp-medium:           1024;
+$bp-large:            1390;
+
+/********************
+** Media Queries
+********************/
+
+$MQs : true;
+$mq-xsmall:     "only screen and (min-width: #{$bp-xsmall}px)";
+$mq-small:     "only screen and (min-width: #{$bp-small}px)";
+$mq-medium:       "only screen and (min-width: #{$bp-medium}px)";
+$mq-large:       "only screen and (min-width: #{$bp-large}px)";
+
+/******************** 
+** Media Query Mixin
+********************/
+@mixin bp($point) {
+  @if ($MQs) {
+    @if $point == xsml {
+      @media #{$mq-xsmall} { @content; }
+    }
+    @else if $point == sml {
+      @media #{$mq-small} { @content; }
+    }
+    @else if $point == med {
+      @media #{$mq-medium} { @content; }
+    }
+    @else if $point == lrg {
+      @media #{$mq-large}  { @content; }
+    }
+    @else if $point == retina {
+      @media #{$mq-retina}  { @content; }
+    }
+  }
+  @else {
+    @if $point != retina {
+      @content;
+    }
+  }
+}

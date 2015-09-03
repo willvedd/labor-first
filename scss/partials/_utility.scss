@@ -1,0 +1,25 @@
+.cf, .clearfix { 
+	*zoom: 1;
+	clear: both;
+    &:after {  
+    	height: 0; 
+		content: "."; 
+		display: block; 
+		clear: both; 
+		visibility: hidden;
+	}
+}
+.screen-reader-text {
+	position: absolute !important;
+	height: 1px; width: 1px; 
+	overflow: hidden;
+	clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+	clip: rect(1px, 1px, 1px, 1px);
+}
+
+%vert-center {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	@include transform(translate(-50%, -50%));
+}
