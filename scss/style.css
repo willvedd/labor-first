@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*
  * Association for Public Art - Website Redesign
  * @Description - Main CSS file
@@ -394,6 +395,28 @@ th {
 /********************
 ** Partials
 ********************/
+.cf, .clearfix {
+  *zoom: 1;
+  clear: both;
+}
+.cf:after, .clearfix:after {
+  height: 0;
+  content: ".";
+  display: block;
+  clear: both;
+  visibility: hidden;
+}
+
+.screen-reader-text {
+  position: absolute !important;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  clip: rect(1px 1px 1px 1px);
+  /* IE6, IE7 */
+  clip: rect(1px, 1px, 1px, 1px);
+}
+
 /********************
 ** Breakpoints
 ********************/
@@ -417,35 +440,64 @@ th {
   color: #FFFFFF;
 }
 
+.text-blue {
+  color: #13b6eb;
+}
+
+.text-red {
+  color: #f26c4f;
+}
+
 /********************
 ** Font Config
 ********************/
+@font-face {
+  font-family: 'quicksand';
+  src: url("../font/Quicksand-Light.ttf");
+  font-weight: 100;
+}
+@font-face {
+  font-family: 'quicksand';
+  src: url("../font/Quicksand-Bold.ttf");
+  font-weight: 800;
+}
+@font-face {
+  font-family: 'quicksand';
+  src: url("../font/Quicksand-Regular.ttf");
+  font-weight: 500;
+}
+@font-face {
+  font-family: 'Genericons';
+  src: url("../font/Genericons.eot");
+  src: url("../font/Genericons.eot?#iefix") format("embedded-opentype"), url("../font/Genericons.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
 /********************
 ** Font Styles
 ********************/
+html {
+  font-family: 'quicksand';
+  font-weight: 500;
+}
+
 h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
   display: block;
-  font-weight: normal;
+  font-weight: 500;
 }
 
 p {
-  font-size: 17px;
-  font-size: 1.0625rem;
-  line-height: 28px;
-  line-height: 1.75rem;
-}
-@media only screen and (min-width: 769px) {
-  p {
-    line-height: 36px;
-    line-height: 2.25rem;
-  }
+  font-size: 16px;
+  font-size: 1rem;
+  line-height: 18px;
+  line-height: 1.125rem;
 }
 @media only screen and (min-width: 1024px) {
   p {
-    font-size: 20px;
-    font-size: 1.25rem;
-    line-height: 37px;
-    line-height: 2.3125rem;
+    font-size: 18px;
+    font-size: 1.125rem;
+    line-height: 20px;
+    line-height: 1.25rem;
   }
 }
 
@@ -486,7 +538,15 @@ a {
 }
 
 .bold {
-  font-weight: 600;
+  font-weight: bolder;
+}
+
+.light {
+  font-weight: lighter;
+}
+
+.underline {
+  text-decoration: underline;
 }
 
 * {
@@ -547,28 +607,6 @@ figure {
   margin: 0 0;
 }
 
-.cf, .clearfix {
-  *zoom: 1;
-  clear: both;
-}
-.cf:after, .clearfix:after {
-  height: 0;
-  content: ".";
-  display: block;
-  clear: both;
-  visibility: hidden;
-}
-
-.screen-reader-text {
-  position: absolute !important;
-  height: 1px;
-  width: 1px;
-  overflow: hidden;
-  clip: rect(1px 1px 1px 1px);
-  /* IE6, IE7 */
-  clip: rect(1px, 1px, 1px, 1px);
-}
-
 /********************
 ** Container
 ********************/
@@ -580,6 +618,18 @@ figure {
   height: auto;
   margin: 0 auto;
   padding: 0;
+  z-index: 1;
+  padding: 0 5px;
+}
+@media only screen and (min-width: 769px) {
+  .page-container {
+    padding: 0 35px;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .page-container {
+    padding: 0 50px;
+  }
 }
 
 /********************
@@ -684,12 +734,151 @@ figure {
 /********************
 ** Buttons
 ********************/
+.btn.pill {
+  display: inline-block;
+  text-align: center;
+  color: #FFFFFF;
+  padding: 6px 10px;
+  border-radius: 666px;
+  border: 1px solid #FFFFFF;
+  font-weight: 800;
+  text-transform: uppercase;
+  font-size: 15px;
+  font-size: 0.9375rem;
+  -webkit-transition: background-color 0.25s ease-in-out;
+  -moz-transition: background-color 0.25s ease-in-out;
+  -ms-transition: background-color 0.25s ease-in-out;
+  -o-transition: background-color 0.25s ease-in-out;
+  transition: background-color 0.25s ease-in-out;
+}
+@media only screen and (min-width: 769px) {
+  .btn.pill {
+    padding: 8px 15px;
+    font-size: 16px;
+    font-size: 1rem;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .btn.pill {
+    font-size: 20px;
+    font-size: 1.25rem;
+  }
+}
+.btn.pill.blue {
+  background-color: rgba(19, 182, 235, 0.6);
+}
+.btn.pill.blue:hover {
+  background-color: #13b6eb;
+}
+.btn.pill.green {
+  background-color: rgba(39, 192, 133, 0.8);
+}
+.btn.pill.green:hover {
+  background-color: #27c085;
+}
+.btn.pill.large {
+  padding: 10px 20px;
+  border-radius: 50px;
+}
+@media only screen and (min-width: 769px) {
+  .btn.pill.large {
+    padding: 15px 25px;
+  }
+}
+
 /********************
 ** Navigation
 ********************/
 /********************
 ** Footer
 ********************/
+/********************
+** Inputs
+********************/
+.label-standard {
+  position: relative;
+  text-transform: uppercase;
+  font-size: 14px;
+  font-size: 0.875rem;
+  line-height: 14px;
+  line-height: 0.875rem;
+  padding-left: 5px;
+  text-transform: uppercase;
+  font-weight: 600;
+  display: inline-block;
+  width: 100%;
+}
+.label-standard input {
+  display: block;
+  width: 100%;
+  background-color: #FFFFFF;
+  border-radius: 5px;
+  border: 3px solid #b7b7b7;
+  padding: 12px 10px;
+  color: #3c3f41;
+  font-size: 18px;
+  font-size: 1.125rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+  margin-top: 5px;
+  -webkit-transition: all 0.25s ease-in-out;
+  -moz-transition: all 0.25s ease-in-out;
+  -ms-transition: all 0.25s ease-in-out;
+  -o-transition: all 0.25s ease-in-out;
+  transition: all 0.25s ease-in-out;
+}
+.label-standard input:focus {
+  border-color: #13b6eb;
+}
+.label-standard:before, .label-standard:after {
+  font-size: 34px;
+  font-size: 2.125rem;
+  font-family: "Genericons";
+  display: block;
+  position: absolute;
+  top: 50%;
+  -webkit-transition: opacity 0.25s ease-in-out;
+  -moz-transition: opacity 0.25s ease-in-out;
+  -ms-transition: opacity 0.25s ease-in-out;
+  -o-transition: opacity 0.25s ease-in-out;
+  transition: opacity 0.25s ease-in-out;
+  opacity: 0;
+}
+.label-standard:before {
+  content: "\f431";
+  color: #FFFFFF;
+  left: -35px;
+  -webkit-transform: translateY(-50%) rotate(-90deg);
+  -moz-transform: translateY(-50%) rotate(-90deg);
+  -ms-transform: translateY(-50%) rotate(-90deg);
+  -o-transform: translateY(-50%) rotate(-90deg);
+  transform: translateY(-50%) rotate(-90deg);
+}
+.label-standard:after {
+  right: 10px;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+.label-standard.focus:before {
+  opacity: .5;
+}
+.label-standard.invalid:after {
+  opacity: 1;
+  color: #f26c4f;
+  content: "";
+}
+.label-standard.valid:after {
+  opacity: 1;
+  color: #27c085;
+  content: "";
+}
+.label-standard.half {
+  width: 50%;
+}
+
 /********************
 ** Homepage
 ********************/
@@ -699,6 +888,7 @@ figure {
   background-size: cover;
   background-position: 50% 50%;
   position: relative;
+  color: #FFFFFF;
 }
 #home:after {
   position: absolute;
@@ -709,5 +899,150 @@ figure {
   height: 100%;
   width: 100%;
   background-color: #00519b;
-  opacity: .4;
+  opacity: .75;
+}
+#home a {
+  color: #FFFFFF;
+}
+#home .header {
+  position: relative;
+  left: 0;
+  top: 15px;
+}
+@media only screen and (min-width: 769px) {
+  #home .header {
+    top: 35px;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  #home .header {
+    top: 50px;
+  }
+}
+#home .header h1 {
+  font-size: 44px;
+  font-size: 2.75rem;
+}
+#home .header .tagline {
+  padding: 5px 0 0 0;
+  display: block;
+  font-size: 13px;
+  font-size: 0.8125rem;
+  letter-spacing: 0.075em;
+}
+#home .header .logo-wrap {
+  display: inline-block;
+  border-bottom: 1px solid #FFFFFF;
+}
+#home .header .home-nav-link {
+  display: block;
+  padding: 5px;
+}
+#home .header .home-nav-link:hover:after {
+  margin-left: 8px;
+}
+#home .header .home-nav-link:after {
+  content: "";
+  display: inline-block;
+  border-left: 8px solid #FFFFFF;
+  border-bottom: 4px solid transparent;
+  border-top: 4px solid transparent;
+  vertical-align: middle;
+  margin-left: 5px;
+  margin-top: -5px;
+  -webkit-transition: margin-left 0.25s linear;
+  -moz-transition: margin-left 0.25s linear;
+  -ms-transition: margin-left 0.25s linear;
+  -o-transition: margin-left 0.25s linear;
+  transition: margin-left 0.25s linear;
+}
+#home .home-middle {
+  max-width: 425px;
+  width: 90%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+/********************
+** Account Mangement
+********************/
+#home .home-account-management .home-account-management-copy {
+  margin-bottom: 40px;
+  border-bottom: 1px solid #FFFFFF;
+}
+#home .home-account-management .home-account-management-copy p {
+  font-size: 18px;
+  font-size: 1.125rem;
+  line-height: 18px;
+  line-height: 1.125rem;
+  padding-bottom: 20px;
+  padding-top: 15px;
+}
+@media only screen and (min-width: 769px) {
+  #home .home-account-management .home-account-management-copy p {
+    padding-top: 25px;
+    font-size: 20px;
+    font-size: 1.25rem;
+    line-height: 20px;
+    line-height: 1.25rem;
+  }
+}
+#home .home-account-management .home-account-management-title {
+  font-size: 30px;
+  font-size: 1.875rem;
+  font-weight: bold;
+}
+#home .home-account-management .call-to-action {
+  opacity: .5;
+  pointer-events: none;
+  cursor: not-allowed;
+}
+#home .home-account-management.error .home-account-management-title {
+  color: #f26c4f;
+}
+#home .home-account-management.allValid .call-to-action {
+  opacity: 1;
+  pointer-events: all;
+  cursor: pointer;
+}
+
+.home-introduction {
+  max-width: 800px;
+  text-align: center;
+}
+.home-introduction p {
+  padding: 30px 0px;
+  font-size: 26px;
+  font-size: 1.625rem;
+  line-height: 28px;
+  line-height: 1.75rem;
+}
+@media only screen and (min-width: 769px) {
+  .home-introduction p {
+    padding: 35px 0px;
+    font-size: 36px;
+    font-size: 2.25rem;
+    line-height: 36px;
+    line-height: 2.25rem;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .home-introduction p {
+    padding: 50px 0px;
+    font-size: 42px;
+    font-size: 2.625rem;
+    line-height: 42px;
+    line-height: 2.625rem;
+  }
+}
+.home-introduction .enroll-sub {
+  padding-top: 20px;
+  font-size: 18px;
+  font-size: 1.125rem;
 }

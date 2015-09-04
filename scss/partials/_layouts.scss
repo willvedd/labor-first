@@ -6,10 +6,18 @@
 	position: relative;
 	width: 100%;
 	max-width: 1170px;
-	min-height: 100%;
+	min-height: 100%; 
 	height: auto;
 	margin: 0 auto;
 	padding: 0;
+  z-index: 1;
+  padding: 0 5px;
+  @include bp(sml) {
+    padding: 0 35px;
+  }
+  @include bp(med) {
+    padding: 0 50px;
+  }
 }
 
 /********************

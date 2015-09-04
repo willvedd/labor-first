@@ -6,33 +6,48 @@
 $baseFontSize:          16;
 $baseLineHeight:        1.875em;
 
+$f-quicksand: 			'quicksand';
+$f-icons:				"Genericons";
 
-// @font-face {
-//     font-family: 'Genericons';
-//     src: url('../fonts/Genericons.eot');
-//     src: url('../fonts/Genericons.eot?#iefix') format('embedded-opentype'),
-//          url('../fonts/Genericons.ttf') format('truetype'),
-//          url('../fonts/Genericons.svg#genericonsregular') format('svg');
-//     font-weight: normal;
-//     font-style: normal;
-// }
-
+@font-face {
+    font-family: 'quicksand';
+    src: url('../font/Quicksand-Light.ttf');
+    font-weight: 100;
+}
+@font-face {
+    font-family: 'quicksand';
+    src: url('../font/Quicksand-Bold.ttf');
+    font-weight: 800;
+}
+@font-face {
+    font-family: 'quicksand';
+    src: url('../font/Quicksand-Regular.ttf');
+    font-weight: 500;
+}
+@font-face {
+    font-family: 'Genericons';
+    src: url('../font/Genericons.eot');
+    src: url('../font/Genericons.eot?#iefix') format('embedded-opentype'),
+         url('../font/Genericons.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
 
 /********************
 ** Font Styles
 ********************/
-
-h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 { display: block; font-weight: normal; }
+html{
+	font-family: 'quicksand';
+	font-weight: 500;
+}
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 { display: block; font-weight: 500;}
 
 p { 
-	@include font-size(17);
-	@include line-height(28);
-	@include bp(sml) {
-		@include line-height(36);
-	}
+	@include font-size(16);
+	@include line-height(18);
 	@include bp(med) {
-		@include font-size(20);
-		@include line-height(37);
+		@include font-size(18);
+		@include line-height(20);
     }
 }
 
@@ -71,5 +86,11 @@ a {
 	text-align: center;
 }
 .bold{
-	font-weight: 600;
+	font-weight: bolder;
+}
+.light{
+	font-weight: lighter;
+}
+.underline{
+	text-decoration: underline;
 }

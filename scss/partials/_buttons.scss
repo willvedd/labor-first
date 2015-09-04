@@ -1,5 +1,48 @@
 /********************
 ** Buttons
 ********************/
+.btn{
 
+	&.pill{
+		display: inline-block;
+		text-align: center;
+		color: $c-white;
+		padding: 6px 10px;
+		border-radius: 666px;
+		border: 1px solid $c-white;
+		font-weight: 800;
+		text-transform: uppercase;
+		@include font-size(15);
+		@include transition(background-color .25s ease-in-out);
+		
+		@include bp(sml) {
+			padding: 8px 15px;
+			@include font-size(16);	
+		}
+		@include bp(med) {
+			@include font-size(20);
+		}
+
+		&.blue{
+			background-color: rgba($c-blue-light,.6);
+			&:hover{
+				background-color: rgba($c-blue-light,1);
+			}
+		}
+		&.green{
+			background-color: rgba($c-green,.8);
+			&:hover{
+				background-color: rgba($c-green,1);
+			}
+		}
+		&.large{
+			padding: 10px 20px;
+			border-radius: 50px;
+			@include bp(sml) {
+				padding: 15px 25px;	
+			}
+		}
+	}
+	
+}
 
