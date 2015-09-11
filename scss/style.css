@@ -1291,6 +1291,9 @@ figure {
   color: #3c3f41;
   border-bottom: 1px solid #b7b7b7;
 }
+.dashboard-block .dashboard-block-label h1 {
+  font-weight: bolder;
+}
 .dashboard-block .dashboard-block-cta-bottom {
   display: block;
   text-align: center;
@@ -1302,6 +1305,7 @@ figure {
   line-height: 30px;
   line-height: 1.875rem;
   letter-spacing: 0.025em;
+  font-weight: bolder;
   text-decoration: none;
   -webkit-transition: background-color 0.25s ease-in-out;
   -moz-transition: background-color 0.25s ease-in-out;
@@ -1319,6 +1323,7 @@ figure {
   line-height: 40px;
   line-height: 2.5rem;
   color: #00519b;
+  font-weight: bolder;
 }
 .dashboard-profile .dashboard-profile-union {
   font-size: 20px;
@@ -1352,4 +1357,51 @@ figure {
 }
 .dashboard-profile .profile-item .profile-value {
   color: #3c3f41;
+}
+
+.dashboard-block-suport {
+  color: #00519b;
+  text-align: center;
+}
+.dashboard-block-suport .support-headline {
+  font-size: 32px;
+  font-size: 2rem;
+  line-height: 30px;
+  line-height: 1.875rem;
+  padding-bottom: 30px;
+}
+.dashboard-block-suport .support-headline:before {
+  content: "\f438";
+  display: block;
+  font-family: "Genericons";
+  font-size: 48px;
+  font-size: 3rem;
+  padding-bottom: 25px;
+}
+.dashboard-block-suport .support-hours {
+  font-size: 20px;
+  font-size: 1.25rem;
+  line-height: 24px;
+  line-height: 1.5rem;
+}
+.dashboard-block-suport .support-message {
+  font-size: 16px;
+  font-size: 1rem;
+  line-height: 18px;
+  line-height: 1.125rem;
+}
+
+.dashboard-block-enrollment.pending .dashboard-block-label {
+  background-color: #f26c4f;
+  color: #FFFFFF;
+}
+
+article.plan-block {
+  padding: 25px;
+}
+article.plan-block .plan-block-inner {
+  margin: 0 auto;
+}
+article.plan-block .plan-block-inner li {
+  list-style: none;
 }

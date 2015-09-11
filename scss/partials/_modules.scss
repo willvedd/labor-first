@@ -406,6 +406,9 @@
 		@include letter-spacing(25);
 		color: $c-base;
 		border-bottom: 1px solid $c-gray;
+		h1{
+			font-weight: bolder;
+		}
 	}
 	.dashboard-block-cta-bottom{
 		display: block;
@@ -416,6 +419,7 @@
 		@include font-size(20);
 		@include line-height(30);
 		@include letter-spacing(25);
+		font-weight: bolder;
 		text-decoration: none;
 		@include transition(background-color .25s ease-in-out);
 		&:hover{
@@ -428,6 +432,7 @@
 		@include font-size(25);
 		@include line-height(40);
 		color: $c-blue-dark;
+		font-weight: bolder;
 	}
 	.dashboard-profile-union{
 		@include font-size(20);
@@ -459,8 +464,52 @@
 }
 
 
+.dashboard-block-suport {
+	color: $c-blue-dark;
+	text-align: center;
+
+	.support-headline{
+		@include font-size(32);
+		@include line-height(30);
+		padding-bottom: 30px;
+
+		&:before{
+			content: "\f438";
+			display: block;
+			font-family: $f-icons;
+			@include font-size(48);
+			padding-bottom: 25px;
+		}
+	}
+	.support-hours{
+		@include font-size(20);
+		@include line-height(24);
+	}
+	.support-message{
+		@include font-size(16);
+		@include line-height(18);
+	}
+}
 
 
+.dashboard-block-enrollment{
+	&.pending{
+		.dashboard-block-label{
+			background-color: $c-red;
+			color: $c-white;
+		}
+	}
+}
+
+article.plan-block{
+	padding: 25px;
+	.plan-block-inner{
+		margin: 0 auto;
+		li{
+			list-style: none;
+		}
+	}
+}
 
 
 
