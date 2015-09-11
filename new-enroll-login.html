@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Labor First - New Enrollment</title>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="minimal-ui, width=device-width, initial-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="scss/style.min.css">
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+</head>
+<body id="home">
+	<div class="page-container">
+		<header class="header">
+			<div class="logo-wrap">
+				<h1 class="logo"><span class="text-blue">Retiree</span>First</h1>
+				<span class="tagline up">A division of labor first</span>
+			</div>
+			<a href="#" class="home-nav-link up">Contact</a>
+		</header>
+		<section class="home-account-management home-middle">
+			<div class="home-account-management-copy">
+				<span class="home-account-management-title">Create a Password</span>
+				<p>Enter your email and create a password that contains eight characters and one number.</p>
+			</div>
+
+			<label class="input-first label-standard" for="first_name">Email Address
+				<span class="input-focus"></span>
+				<input class="" type="email" oninput="change()" onfocus="focusThis()" data-type="email" name="email" placeholder="Enter your email" required>
+				<span class="input-status"></span>
+			</label>
+			<label class="input-last label-standard" for="first_name">Password
+				<span class="input-focus"></span>
+				<input class="" type="password"  oninput="change()" onfocus="focusThis()" data-type="password" name="password" placeholder="Enter password" required>
+				<span class="input-status"></span>
+			</label>
+			<label class="input-social label-standard" for="social">Re-enter password
+				<span class="input-focus"></span>
+				<input class="" oninput="change()" onfocus="focusThis()" data-type="password" type="password" name="password-confirm" placeholder="Confirm your password again" required>
+				<span class="input-status"></span>
+			</label>
+			<a href="#" class="btn pill call-to-action">Continue</a>
+		</section>
+	</div>
+</body>
+<script type="text/javascript">
+	
+function focusThis(){
+	console.log("focusThis");
+	var target = event.target.parentElement;
+	$('.label-standard').removeClass('focus');
+	$(target).addClass('focus');
+}
+function change(){
+	var type = event.target.dataset.type;
+	var value = event.target.value;
+	var target = event.target.parentElement;
+
+	if(type === "name"){
+		if( value.length >0 && isNaN(parseFloat(value)) && !isFinite(value) ){
+			$(target).removeClass('invalid');
+			$(target).addClass('valid');
+		}
+		else{
+			$(target).removeClass('valid');
+			$(target).addClass('invalid');
+		}
+	}
+	else if(type ==="social") {
+		if( value.length === 4 && !isNaN(value) ){
+			$(target).removeClass('invalid');
+			$(target).addClass('valid');
+		}
+		else{
+			$(target).removeClass('valid');
+			$(target).addClass('invalid');
+		}
+	}
+	else if(type ==="email") {
+		var re = /^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/i;
+		if( re.test(value) ){
+			$(target).removeClass('invalid');
+			$(target).addClass('valid');
+		}
+		else{
+			$(target).removeClass('valid');
+			$(target).addClass('invalid');
+		}
+	}
+	else if(type ==="password") {
+		var re = /^(?=.*\d).{8,24}$/;
+		if(event.target.name == 'password-confirm'){
+			if( re.test(value) && value == $('input[name="password"]')[0].value){
+				$(target).removeClass('invalid');
+				$(target).addClass('valid');
+			}
+			else{
+				$(target).removeClass('valid');
+				$(target).addClass('invalid');
+			}
+		}
+		else{
+			console.log("adsfasdf")
+			if( re.test(value) ){
+				$(target).removeClass('invalid');
+				$(target).addClass('valid');
+			}
+			else{
+				$(target).removeClass('valid');
+				$(target).addClass('invalid');
+			}
+		}
+	}
+
+
+	var allValid = true;
+	$('.label-standard').each(function(index,input){
+		if(!$(input).hasClass('valid')){
+			allValid = false;
+			return;
+		}
+	});
+	if(allValid) $('.home-account-management').addClass('allValid');
+	else  $('.home-account-management').removeClass('allValid');
+
+
+	return;
+}
+
+</script>
+</html>

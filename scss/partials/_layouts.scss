@@ -79,3 +79,23 @@
 }
 
 
+
+.dashboard-third,.dashboard-two-third,.dashboard-full{
+  width: 100%;
+  float: none;
+  padding: 5px;
+  @include bp(sml) {
+    float: left;
+    padding: 12px;
+  }
+}
+.dashboard-two-third{
+  @include bp(sml) {
+   width: 66.666%;
+  }
+}
+.dashboard-third{
+  @include bp(sml) {
+   width: 33.333%;
+  }
+}

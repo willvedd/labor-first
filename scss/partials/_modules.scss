@@ -249,3 +249,219 @@
 		@include font-size(18);
 	}
 }
+
+
+/********************
+** Dashboard
+********************/
+#dashboard{
+
+	.header{
+		background-color: $c-blue-dark;
+		padding: 10px;
+		@include bp(sml) {
+			padding: 20px;
+		}
+
+		.logo-wrap{
+			width: 100%;
+			text-align: left;
+			display: inline-block;
+			@include bp(sml) {
+				width: 50%;
+			}
+		}
+		nav.main-nav{
+			display: inline-block;
+			width: 100%;
+			margin: 0 auto;
+			text-align: center;
+			padding: 10px 0;
+			@include bp(sml) {
+				width: 50%;
+				margin-left: -5px;
+				text-align: right;
+			}
+			
+			a{
+				color: $c-blue-light;
+				padding: 5px 10px;
+				@include bp(sml) {
+					padding: 15px;
+					width: 33%;
+				}
+			}
+		}
+	}
+
+	
+	.dashboard-banner{
+		background-color: $c-white;
+		color: $c-blue-dark;
+		padding: 25px 0;
+		@include bp(sml) {
+			padding: 35px;
+		}
+		@include bp(med) {
+			padding: 50px 0;
+		}
+
+		.dashboard-banner-left{
+			display: inline-block;
+			vertical-align: top;
+			width: 100%;
+			padding: 0 20px;
+			@include bp(sml) {
+				width: 66.666%;
+				border-right: 1px solid $c-gray;
+			}
+
+			h1.dashboard-banner-heading{
+				@include font-size(32);
+					@include line-height(32);
+				@include bp(sml){
+					@include font-size(36);
+					@include line-height(36);
+				}
+				@include bp(med){
+					@include font-size(42);
+					@include line-height(42);
+				}
+				@include bp(lrg){
+					@include font-size(45);
+					@include line-height(45);
+				}
+			}
+			span.dashboard-banner-subheading{
+				@include font-size(18);
+				@include line-height(30);
+
+				@include bp(med){
+					@include font-size(20);
+					@include line-height(36);
+				}
+				@include bp(lrg){
+					@include font-size(24);
+					@include line-height(40);
+				}
+			}
+		}
+		.dashboard-banner-right{
+			display: inline-block;
+			vertical-align: top;
+			width: 100%;
+			margin-left: -5px;
+			padding: 0 20px;
+			@include bp(sml) {
+				width: 33.333%;
+			}
+		}
+		.dashboard-banner-logo{
+			
+			max-width: 200px;
+			padding: 15px 0;
+			width: 50%;
+			@include bp(sml) {
+				width: auto;
+				margin: 0 auto;
+				padding: 0;
+			}
+		}
+	}
+
+	.dashboard-main{
+		background-color: $c-gray-light;
+		.dasbhoard-main-message{
+			padding: 25px 0;
+			color: $c-blue-dark;
+			@include bp(sml){ 
+				padding: 50px 0;
+			}
+			@include bp(med){ 
+				padding: 65px 0;
+			}
+			p{
+				@include font-size(18);
+				@include line-height(26);
+
+				@include bp(sml){ 
+					@include font-size(20);
+					@include line-height(30);
+				}
+			}
+		}
+	}
+}
+
+
+.dashboard-block{
+	border-radius: 5px;
+	border: 1px solid $c-gray;
+	background-color: $c-white;
+	.dashboard-block-label{
+		text-align: center;
+		padding: 15px;
+		@include font-size(20);
+		@include line-height(30);
+		@include letter-spacing(25);
+		color: $c-base;
+		border-bottom: 1px solid $c-gray;
+	}
+	.dashboard-block-cta-bottom{
+		display: block;
+		text-align: center;
+		padding: 15px;
+		background-color: $c-blue-light;
+		color: $c-white;
+		@include font-size(20);
+		@include line-height(30);
+		@include letter-spacing(25);
+		text-decoration: none;
+		@include transition(background-color .25s ease-in-out);
+		&:hover{
+			background-color: darken($c-blue-light,7);
+		}
+	}
+}
+.dashboard-profile{
+	.dashboard-profile-name{
+		@include font-size(25);
+		@include line-height(40);
+		color: $c-blue-dark;
+	}
+	.dashboard-profile-union{
+		@include font-size(20);
+		@include line-height(30);
+	}
+	.profile-section{
+		padding: 30px 0;
+		margin: 0 20px;
+		border-bottom: 1px solid $c-gray;
+	}
+	.profile-item{
+		@include font-size(18);
+		@include line-height(26);
+		@include bp(sml) {
+			@include font-size(20);
+			@include line-height(30);
+		}
+		
+		padding: 5px 0;
+
+		.profile-label{
+			color: $c-blue-dark;
+			padding-right: 5px;
+		}
+		.profile-value{
+			color: $c-base;
+		}
+	}
+}
+
+
+
+
+
+
+
+

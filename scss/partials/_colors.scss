@@ -7,6 +7,7 @@ $c-white:		#FFFFFF;
 $c-black:		#000000;
 
 $c-gray:		#b7b7b7;
+$c-gray-light: 	#f6f7f7;
 
 $c-blue-dark:	#00519b;//background overlay blue
 $c-blue-light:  #13b6eb;//logo blue
@@ -19,6 +20,8 @@ $c-green:		#27c085;
 ** Colors Classes
 ********************/
 .bg-gray{ background-color: $c-gray; }
+.bg-blue{ background-color: $c-blue-light;}
+.bg-green{ background-color: $c-green;}
 
 
 .text-white{ color: $c-white; }

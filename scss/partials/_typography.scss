@@ -59,7 +59,8 @@ p + p {
 }
 
 a {
-	text-decoration: none;
+	text-decoration: underline;
+	color: $c-blue-dark;	
 }
 
 
@@ -93,4 +94,12 @@ a {
 }
 .underline{
 	text-decoration: underline;
+}
+
+
+/********************
+** Specific font modifiers
+********************/
+.phone{
+	color: $c-blue-light;
 }
