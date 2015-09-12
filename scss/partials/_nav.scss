@@ -5,3 +5,34 @@ $nav-height-mobile: 75px;
 $nav-height: 115px;
 
 nav.main-navigation {}
+h1.logo{
+	color: $c-white;
+}
+
+nav.main-nav{
+	display: inline-block;
+	width: 100%;
+	margin: 0 auto;
+	text-align: center;
+	padding: 10px 0;
+	@include bp(sml) {
+		width: 50%;
+		margin-left: -5px;
+		text-align: right;
+	}
+	
+	a{
+		color: $c-white;
+		text-decoration: none;
+		padding: 5px 10px;
+		@include bp(sml) {
+			padding: 15px;
+			width: 33%;
+		}
+		&:after{
+			content: "";
+			height: 2px;
+			width: 0;
+		}
+	}
+}

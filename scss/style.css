@@ -748,21 +748,33 @@ figure {
   min-width: 0;
 }
 
-.dashboard-third, .dashboard-two-third, .dashboard-full {
+.dashboard-third, .dashboard-two-third, .dashboard-half, .dashboard-full {
   width: 100%;
   float: none;
   padding: 5px;
 }
 @media only screen and (min-width: 769px) {
-  .dashboard-third, .dashboard-two-third, .dashboard-full {
+  .dashboard-third, .dashboard-two-third, .dashboard-half, .dashboard-full {
     float: left;
     padding: 12px;
   }
 }
 
 @media only screen and (min-width: 769px) {
+  .dashboard-half {
+    width: 50%;
+  }
+}
+
+@media only screen and (min-width: 769px) {
   .dashboard-two-third {
     width: 66.666%;
+  }
+}
+
+@media only screen and (min-width: 769px) {
+  .dashboard-full {
+    width: 100%;
   }
 }
 
@@ -824,6 +836,41 @@ figure {
 /********************
 ** Navigation
 ********************/
+h1.logo {
+  color: #FFFFFF;
+}
+
+nav.main-nav {
+  display: inline-block;
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+  padding: 10px 0;
+}
+@media only screen and (min-width: 769px) {
+  nav.main-nav {
+    width: 50%;
+    margin-left: -5px;
+    text-align: right;
+  }
+}
+nav.main-nav a {
+  color: #FFFFFF;
+  text-decoration: none;
+  padding: 5px 10px;
+}
+@media only screen and (min-width: 769px) {
+  nav.main-nav a {
+    padding: 15px;
+    width: 33%;
+  }
+}
+nav.main-nav a:after {
+  content: "";
+  height: 2px;
+  width: 0;
+}
+
 /********************
 ** Footer
 ********************/
@@ -1096,86 +1143,62 @@ figure {
 }
 
 /********************
-** Dashboard
+** Dashboard page
 ********************/
-#dashboard .header {
+body.dashboard .header {
   background-color: #00519b;
   padding: 10px;
 }
 @media only screen and (min-width: 769px) {
-  #dashboard .header {
+  body.dashboard .header {
     padding: 20px;
   }
 }
-#dashboard .header .logo-wrap {
+body.dashboard .header .logo-wrap {
   width: 100%;
   text-align: left;
   display: inline-block;
 }
 @media only screen and (min-width: 769px) {
-  #dashboard .header .logo-wrap {
+  body.dashboard .header .logo-wrap {
     width: 50%;
   }
 }
-#dashboard .header nav.main-nav {
-  display: inline-block;
-  width: 100%;
-  margin: 0 auto;
-  text-align: center;
-  padding: 10px 0;
-}
-@media only screen and (min-width: 769px) {
-  #dashboard .header nav.main-nav {
-    width: 50%;
-    margin-left: -5px;
-    text-align: right;
-  }
-}
-#dashboard .header nav.main-nav a {
-  color: #13b6eb;
-  padding: 5px 10px;
-}
-@media only screen and (min-width: 769px) {
-  #dashboard .header nav.main-nav a {
-    padding: 15px;
-    width: 33%;
-  }
-}
-#dashboard .dashboard-banner {
+body.dashboard .dashboard-banner {
   background-color: #FFFFFF;
   color: #00519b;
   padding: 25px 0;
 }
 @media only screen and (min-width: 769px) {
-  #dashboard .dashboard-banner {
+  body.dashboard .dashboard-banner {
     padding: 35px;
   }
 }
 @media only screen and (min-width: 1024px) {
-  #dashboard .dashboard-banner {
+  body.dashboard .dashboard-banner {
     padding: 50px 0;
   }
 }
-#dashboard .dashboard-banner .dashboard-banner-left {
+body.dashboard .dashboard-banner .dashboard-banner-left {
   display: inline-block;
   vertical-align: top;
   width: 100%;
   padding: 0 20px;
 }
 @media only screen and (min-width: 769px) {
-  #dashboard .dashboard-banner .dashboard-banner-left {
+  body.dashboard .dashboard-banner .dashboard-banner-left {
     width: 66.666%;
     border-right: 1px solid #b7b7b7;
   }
 }
-#dashboard .dashboard-banner .dashboard-banner-left h1.dashboard-banner-heading {
+body.dashboard .dashboard-banner .dashboard-banner-left h1.dashboard-banner-heading {
   font-size: 32px;
   font-size: 2rem;
   line-height: 32px;
   line-height: 2rem;
 }
 @media only screen and (min-width: 769px) {
-  #dashboard .dashboard-banner .dashboard-banner-left h1.dashboard-banner-heading {
+  body.dashboard .dashboard-banner .dashboard-banner-left h1.dashboard-banner-heading {
     font-size: 36px;
     font-size: 2.25rem;
     line-height: 36px;
@@ -1183,7 +1206,7 @@ figure {
   }
 }
 @media only screen and (min-width: 1024px) {
-  #dashboard .dashboard-banner .dashboard-banner-left h1.dashboard-banner-heading {
+  body.dashboard .dashboard-banner .dashboard-banner-left h1.dashboard-banner-heading {
     font-size: 42px;
     font-size: 2.625rem;
     line-height: 42px;
@@ -1191,21 +1214,21 @@ figure {
   }
 }
 @media only screen and (min-width: 1390px) {
-  #dashboard .dashboard-banner .dashboard-banner-left h1.dashboard-banner-heading {
+  body.dashboard .dashboard-banner .dashboard-banner-left h1.dashboard-banner-heading {
     font-size: 45px;
     font-size: 2.8125rem;
     line-height: 45px;
     line-height: 2.8125rem;
   }
 }
-#dashboard .dashboard-banner .dashboard-banner-left span.dashboard-banner-subheading {
+body.dashboard .dashboard-banner .dashboard-banner-left span.dashboard-banner-subheading {
   font-size: 18px;
   font-size: 1.125rem;
   line-height: 30px;
   line-height: 1.875rem;
 }
 @media only screen and (min-width: 1024px) {
-  #dashboard .dashboard-banner .dashboard-banner-left span.dashboard-banner-subheading {
+  body.dashboard .dashboard-banner .dashboard-banner-left span.dashboard-banner-subheading {
     font-size: 20px;
     font-size: 1.25rem;
     line-height: 36px;
@@ -1213,14 +1236,14 @@ figure {
   }
 }
 @media only screen and (min-width: 1390px) {
-  #dashboard .dashboard-banner .dashboard-banner-left span.dashboard-banner-subheading {
+  body.dashboard .dashboard-banner .dashboard-banner-left span.dashboard-banner-subheading {
     font-size: 24px;
     font-size: 1.5rem;
     line-height: 40px;
     line-height: 2.5rem;
   }
 }
-#dashboard .dashboard-banner .dashboard-banner-right {
+body.dashboard .dashboard-banner .dashboard-banner-right {
   display: inline-block;
   vertical-align: top;
   width: 100%;
@@ -1228,47 +1251,47 @@ figure {
   padding: 0 20px;
 }
 @media only screen and (min-width: 769px) {
-  #dashboard .dashboard-banner .dashboard-banner-right {
+  body.dashboard .dashboard-banner .dashboard-banner-right {
     width: 33.333%;
   }
 }
-#dashboard .dashboard-banner .dashboard-banner-logo {
+body.dashboard .dashboard-banner .dashboard-banner-logo {
   max-width: 200px;
   padding: 15px 0;
   width: 50%;
 }
 @media only screen and (min-width: 769px) {
-  #dashboard .dashboard-banner .dashboard-banner-logo {
+  body.dashboard .dashboard-banner .dashboard-banner-logo {
     width: auto;
     margin: 0 auto;
     padding: 0;
   }
 }
-#dashboard .dashboard-main {
+body.dashboard .dashboard-main {
   background-color: #f6f7f7;
 }
-#dashboard .dashboard-main .dasbhoard-main-message {
+body.dashboard .dashboard-main .dasbhoard-main-message {
   padding: 25px 0;
   color: #00519b;
 }
 @media only screen and (min-width: 769px) {
-  #dashboard .dashboard-main .dasbhoard-main-message {
+  body.dashboard .dashboard-main .dasbhoard-main-message {
     padding: 50px 0;
   }
 }
 @media only screen and (min-width: 1024px) {
-  #dashboard .dashboard-main .dasbhoard-main-message {
+  body.dashboard .dashboard-main .dasbhoard-main-message {
     padding: 65px 0;
   }
 }
-#dashboard .dashboard-main .dasbhoard-main-message p {
+body.dashboard .dashboard-main .dasbhoard-main-message p {
   font-size: 18px;
   font-size: 1.125rem;
   line-height: 26px;
   line-height: 1.625rem;
 }
 @media only screen and (min-width: 769px) {
-  #dashboard .dashboard-main .dasbhoard-main-message p {
+  body.dashboard .dashboard-main .dasbhoard-main-message p {
     font-size: 20px;
     font-size: 1.25rem;
     line-height: 30px;
@@ -1276,6 +1299,18 @@ figure {
   }
 }
 
+/********************
+** Plan select page
+********************/
+body.plan-select .dashboard-banner .dashboard-banner-left {
+  border-right: none;
+  width: 100%;
+  text-align: center;
+}
+
+/********************
+** General dashboard block class
+********************/
 .dashboard-block {
   border-radius: 5px;
   border: 1px solid #b7b7b7;
@@ -1299,8 +1334,6 @@ figure {
   display: block;
   text-align: center;
   padding: 15px;
-  background-color: #13b6eb;
-  color: #FFFFFF;
   font-size: 20px;
   font-size: 1.25rem;
   line-height: 30px;
@@ -1308,16 +1341,17 @@ figure {
   letter-spacing: 0.025em;
   font-weight: bolder;
   text-decoration: none;
+  text-transform: uppercase;
   -webkit-transition: background-color 0.25s ease-in-out;
   -moz-transition: background-color 0.25s ease-in-out;
   -ms-transition: background-color 0.25s ease-in-out;
   -o-transition: background-color 0.25s ease-in-out;
   transition: background-color 0.25s ease-in-out;
 }
-.dashboard-block .dashboard-block-cta-bottom:hover {
-  background-color: #109cca;
-}
 
+/********************
+** Dashboard profile block
+********************/
 .dashboard-profile .dashboard-profile-name {
   font-size: 25px;
   font-size: 1.5625rem;
@@ -1359,7 +1393,17 @@ figure {
 .dashboard-profile .profile-item .profile-value {
   color: #3c3f41;
 }
+.dashboard-profile .dashboard-block-cta-bottom {
+  background-color: #13b6eb;
+  color: #FFFFFF;
+}
+.dashboard-profile .dashboard-block-cta-bottom:hover {
+  background-color: #109cca;
+}
 
+/********************
+** Support Block
+********************/
 .dashboard-block-suport {
   color: #00519b;
   text-align: center;
@@ -1392,6 +1436,9 @@ figure {
   line-height: 1.125rem;
 }
 
+/********************
+** Differnt states of enrollment
+********************/
 .dashboard-block-enrollment .dashboard-block-enrollment-inner {
   padding: 35px;
 }
@@ -1406,6 +1453,9 @@ figure {
   color: #FFFFFF;
 }
 
+/********************
+** Plan Block
+********************/
 article.plan-block {
   box-shadow: 0 0 10px 0px #BDC1C3;
   position: relative;
@@ -1425,9 +1475,10 @@ article.plan-block .plan-block-header .plan-title {
   line-height: 1.25rem;
   letter-spacing: 0.025em;
 }
-article.plan-block .plan-block-inner {
+article.plan-block .plan-block-inner, article.plan-block .plan-block-pharm-deduct {
   padding: 25px;
   margin: 0 auto;
+  border-bottom: 1px solid #b7b7b7;
 }
 @media only screen and (min-width: 769px) {
   article.plan-block .plan-block-inner {
@@ -1443,10 +1494,50 @@ article.plan-block .plan-block-inner li.plan-item {
   line-height: 20px;
   line-height: 1.25rem;
 }
+@media only screen and (min-width: 769px) {
+  article.plan-block .plan-block-inner li.plan-item {
+    width: calc(100% - 110px);
+  }
+}
 article.plan-block .plan-block-inner li.plan-item .plan-item-label {
   padding-right: 5px;
 }
 article.plan-block .plan-block-inner li.plan-item .plan-item-value {
+  color: #13b6eb;
+  font-weight: bolder;
+}
+article.plan-block .plan-block-pharm-deduct .plan-block-pharm-deduct-title {
+  font-size: 18px;
+  font-size: 1.125rem;
+  line-height: 20px;
+  line-height: 1.25rem;
+  letter-spacing: 0.025em;
+  font-weight: bolder;
+  color: #00519b;
+  text-transform: uppercase;
+}
+article.plan-block .plan-block-pharm-deduct ul {
+  padding-top: 10px;
+}
+article.plan-block .plan-block-pharm-deduct .pharm-deduct-item {
+  display: inline-block;
+  text-align: center;
+  font-size: 15px;
+  font-size: 0.9375rem;
+}
+@media only screen and (min-width: 769px) {
+  article.plan-block .plan-block-pharm-deduct .pharm-deduct-item {
+    font-size: 16px;
+    font-size: 1rem;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  article.plan-block .plan-block-pharm-deduct .pharm-deduct-item {
+    font-size: 18px;
+    font-size: 1.125rem;
+  }
+}
+article.plan-block .plan-block-pharm-deduct .pharm-deduct-item .pharm-deduct-item-value {
   color: #13b6eb;
   font-weight: bolder;
 }
@@ -1494,10 +1585,12 @@ article.plan-block .plan-block-ribbon li .ribbon-label {
   line-height: 16px;
   line-height: 1rem;
   white-space: nowrap;
+  vertical-align: middle;
 }
 article.plan-block .plan-block-ribbon li .ribbon-value {
   text-align: center;
   font-weight: bolder;
+  vertical-align: middle;
   font-size: 22px;
   font-size: 1.375rem;
   letter-spacing: 0.05em;
@@ -1521,7 +1614,6 @@ article.plan-block .plan-block-ribbon li.ribbon-union .ribbon-value {
 article.plan-block .plan-block-footer {
   display: block;
   padding: 15px;
-  border-top: 1px solid #b7b7b7;
   text-align: center;
 }
 article.plan-block .plan-block-footer .plan-block-footer-cta {
@@ -1533,6 +1625,7 @@ article.plan-block .plan-block-footer .plan-block-footer-cta {
   -o-transition: background-color 0.25s ease-in-out;
   transition: background-color 0.25s ease-in-out;
   color: #3c3f41;
+  margin: 10px;
   padding: 15px;
   text-transform: uppercase;
   text-decoration: none;
@@ -1546,7 +1639,7 @@ article.plan-block .plan-block-footer .plan-block-footer-cta {
 }
 @media only screen and (min-width: 769px) {
   article.plan-block .plan-block-footer .plan-block-footer-cta {
-    padding: 20px 25px;
+    padding: 20px 15px;
   }
 }
 article.plan-block .plan-block-footer .plan-block-footer-cta:hover {
@@ -1559,4 +1652,25 @@ article.plan-block .plan-block-footer .plan-block-footer-cta:after {
   vertical-align: middle;
   font-size: 18px;
   font-family: "Genericons";
+  vertical-align: top;
+}
+article.plan-block .dashboard-block-cta-bottom {
+  display: none;
+  background-color: #27c085;
+  color: #FFFFFF;
+}
+article.plan-block .dashboard-block-cta-bottom:hover {
+  background-color: #21a270;
+}
+article.plan-block.selectable .dashboard-block-cta-bottom {
+  display: block;
+}
+
+.plan-block-container {
+  padding: 12px 5px;
+}
+@media only screen and (min-width: 769px) {
+  .plan-block-container {
+    padding: 12px;
+  }
 }
