@@ -255,7 +255,6 @@
 ** Dashboard
 ********************/
 #dashboard{
-
 	.header{
 		background-color: $c-blue-dark;
 		padding: 10px;
@@ -393,7 +392,7 @@
 	}
 }
 
-
+//general dashboard block
 .dashboard-block{
 	border-radius: 5px;
 	border: 1px solid $c-gray;
@@ -427,6 +426,7 @@
 		}
 	}
 }
+//dashboard profile block
 .dashboard-profile{
 	.dashboard-profile-name{
 		@include font-size(25);
@@ -463,7 +463,7 @@
 	}
 }
 
-
+//support block
 .dashboard-block-suport {
 	color: $c-blue-dark;
 	text-align: center;
@@ -491,22 +491,158 @@
 	}
 }
 
-
+//different ststates of enrollment
 .dashboard-block-enrollment{
+	.dashboard-block-enrollment-inner{
+		padding: 35px;
+		article.plan-block{
+			margin: 0 auto;
+		}
+	}
 	&.pending{
-		.dashboard-block-label{
-			background-color: $c-red;
+		.enrollment-status-value{
+			color: $c-red;
+		}
+	}
+	&.active{
+		.enrollment-header{
+			background-color: $c-green;
 			color: $c-white;
 		}
 	}
 }
 
 article.plan-block{
-	padding: 25px;
+	box-shadow: 0 0 10px 0px #BDC1C3;
+	position: relative;
+	.plan-block-header{
+		padding: 15px 25px;
+		text-align: left;
+		border-bottom: 1px solid $c-gray;
+		.plan-title{
+			text-transform: uppercase;
+			font-weight: bolder;
+			color: $c-blue-light;
+			@include font-size(18);
+			@include line-height(20);
+			@include letter-spacing(25);
+		}
+	}
 	.plan-block-inner{
+		padding: 25px;
 		margin: 0 auto;
-		li{
+		@include bp(sml) {
+			min-height: 275px;
+			height: auto;
+		}
+		li.plan-item{
 			list-style: none;
+			padding: 5px 0;
+			@include font-size(18);
+			@include line-height(20);
+			.plan-item-label{
+				padding-right: 5px;
+			}
+			.plan-item-value{
+				color: $c-blue-light;
+				font-weight: bolder;
+			}
+		}
+	}
+	.plan-block-ribbon{
+		position: relative;
+		top: 0;
+		width: 100%;
+		border-bottom: 1px solid $c-gray;
+		@include bp(sml) {
+			border: 1px solid $c-blue-light;
+			//border-bottom-color: transparent;
+			position: absolute;
+			width: 115px;
+			right: 10px;
+		}
+		@include bp(med) {
+			right: 25px;
+		}
+
+		&:after,&:before{//for ribbony part
+			content: "";
+			display: block;
+		}
+		li{
+			padding: 5px;
+			display: inline-block;
+			width: 33.333%;
+			margin-right: -5px;
+			text-align: center;
+			@include bp(sml) {
+				width: 100%;
+				margin-right: 0;
+			}
+			.ribbon-label{
+				text-align: center;
+				font-weight: bolder;
+				@include font-size(16);
+				@include line-height(16);
+				white-space: nowrap;
+			}
+			.ribbon-value {
+				text-align: center;
+				font-weight: bolder;
+				@include font-size(22);
+				@include letter-spacing(50);
+				@include bp(sml) {
+					@include font-size(28);
+				}
+			}
+			&.ribbon-total {
+				background-color: $c-blue-light;
+				color: $c-white;
+			}
+			&.ribbon-yours {
+				.ribbon-value {
+					color: $c-red;
+				}
+			}
+			&.ribbon-union {
+				.ribbon-value {
+					color: $c-green;
+				}
+			}
+		}
+	}
+	.plan-block-footer{
+		display: block;
+		padding: 15px;
+		border-top: 1px solid $c-gray;
+		text-align: center;
+		.plan-block-footer-cta{
+			display: inline-block;
+			background-color: $c-gray-light;
+			@include transition(background-color .25s ease-in-out);
+			color: $c-base;
+			padding: 15px;
+			text-transform: uppercase;
+			text-decoration: none;
+			font-weight: bolder;
+			border-radius: 3px;
+			@include font-size(16);
+			@include line-height(20);
+			@include letter-spacing(25);
+			@include bp(sml) {
+				padding: 20px 25px;
+			}
+			&:hover{
+				background-color: darken($c-gray-light,7);
+			}
+			&:after{
+				content: "\f440";
+				display: inline-block;
+				padding-left: 15px;
+				vertical-align: middle;
+				font-size: 18px;
+				font-family: $f-icons;
+			}
 		}
 	}
 }

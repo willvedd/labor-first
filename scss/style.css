@@ -563,6 +563,7 @@ a {
 ********************/
 .phone {
   color: #13b6eb;
+  font-weight: bolder;
 }
 
 * {
@@ -1391,17 +1392,171 @@ figure {
   line-height: 1.125rem;
 }
 
-.dashboard-block-enrollment.pending .dashboard-block-label {
-  background-color: #f26c4f;
+.dashboard-block-enrollment .dashboard-block-enrollment-inner {
+  padding: 35px;
+}
+.dashboard-block-enrollment .dashboard-block-enrollment-inner article.plan-block {
+  margin: 0 auto;
+}
+.dashboard-block-enrollment.pending .enrollment-status-value {
+  color: #f26c4f;
+}
+.dashboard-block-enrollment.active .enrollment-header {
+  background-color: #27c085;
   color: #FFFFFF;
 }
 
 article.plan-block {
-  padding: 25px;
+  box-shadow: 0 0 10px 0px #BDC1C3;
+  position: relative;
+}
+article.plan-block .plan-block-header {
+  padding: 15px 25px;
+  text-align: left;
+  border-bottom: 1px solid #b7b7b7;
+}
+article.plan-block .plan-block-header .plan-title {
+  text-transform: uppercase;
+  font-weight: bolder;
+  color: #13b6eb;
+  font-size: 18px;
+  font-size: 1.125rem;
+  line-height: 20px;
+  line-height: 1.25rem;
+  letter-spacing: 0.025em;
 }
 article.plan-block .plan-block-inner {
+  padding: 25px;
   margin: 0 auto;
 }
-article.plan-block .plan-block-inner li {
+@media only screen and (min-width: 769px) {
+  article.plan-block .plan-block-inner {
+    min-height: 275px;
+    height: auto;
+  }
+}
+article.plan-block .plan-block-inner li.plan-item {
   list-style: none;
+  padding: 5px 0;
+  font-size: 18px;
+  font-size: 1.125rem;
+  line-height: 20px;
+  line-height: 1.25rem;
+}
+article.plan-block .plan-block-inner li.plan-item .plan-item-label {
+  padding-right: 5px;
+}
+article.plan-block .plan-block-inner li.plan-item .plan-item-value {
+  color: #13b6eb;
+  font-weight: bolder;
+}
+article.plan-block .plan-block-ribbon {
+  position: relative;
+  top: 0;
+  width: 100%;
+  border-bottom: 1px solid #b7b7b7;
+}
+@media only screen and (min-width: 769px) {
+  article.plan-block .plan-block-ribbon {
+    border: 1px solid #13b6eb;
+    position: absolute;
+    width: 115px;
+    right: 10px;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  article.plan-block .plan-block-ribbon {
+    right: 25px;
+  }
+}
+article.plan-block .plan-block-ribbon:after, article.plan-block .plan-block-ribbon:before {
+  content: "";
+  display: block;
+}
+article.plan-block .plan-block-ribbon li {
+  padding: 5px;
+  display: inline-block;
+  width: 33.333%;
+  margin-right: -5px;
+  text-align: center;
+}
+@media only screen and (min-width: 769px) {
+  article.plan-block .plan-block-ribbon li {
+    width: 100%;
+    margin-right: 0;
+  }
+}
+article.plan-block .plan-block-ribbon li .ribbon-label {
+  text-align: center;
+  font-weight: bolder;
+  font-size: 16px;
+  font-size: 1rem;
+  line-height: 16px;
+  line-height: 1rem;
+  white-space: nowrap;
+}
+article.plan-block .plan-block-ribbon li .ribbon-value {
+  text-align: center;
+  font-weight: bolder;
+  font-size: 22px;
+  font-size: 1.375rem;
+  letter-spacing: 0.05em;
+}
+@media only screen and (min-width: 769px) {
+  article.plan-block .plan-block-ribbon li .ribbon-value {
+    font-size: 28px;
+    font-size: 1.75rem;
+  }
+}
+article.plan-block .plan-block-ribbon li.ribbon-total {
+  background-color: #13b6eb;
+  color: #FFFFFF;
+}
+article.plan-block .plan-block-ribbon li.ribbon-yours .ribbon-value {
+  color: #f26c4f;
+}
+article.plan-block .plan-block-ribbon li.ribbon-union .ribbon-value {
+  color: #27c085;
+}
+article.plan-block .plan-block-footer {
+  display: block;
+  padding: 15px;
+  border-top: 1px solid #b7b7b7;
+  text-align: center;
+}
+article.plan-block .plan-block-footer .plan-block-footer-cta {
+  display: inline-block;
+  background-color: #f6f7f7;
+  -webkit-transition: background-color 0.25s ease-in-out;
+  -moz-transition: background-color 0.25s ease-in-out;
+  -ms-transition: background-color 0.25s ease-in-out;
+  -o-transition: background-color 0.25s ease-in-out;
+  transition: background-color 0.25s ease-in-out;
+  color: #3c3f41;
+  padding: 15px;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-weight: bolder;
+  border-radius: 3px;
+  font-size: 16px;
+  font-size: 1rem;
+  line-height: 20px;
+  line-height: 1.25rem;
+  letter-spacing: 0.025em;
+}
+@media only screen and (min-width: 769px) {
+  article.plan-block .plan-block-footer .plan-block-footer-cta {
+    padding: 20px 25px;
+  }
+}
+article.plan-block .plan-block-footer .plan-block-footer-cta:hover {
+  background-color: #e3e6e6;
+}
+article.plan-block .plan-block-footer .plan-block-footer-cta:after {
+  content: "\f440";
+  display: inline-block;
+  padding-left: 15px;
+  vertical-align: middle;
+  font-size: 18px;
+  font-family: "Genericons";
 }
