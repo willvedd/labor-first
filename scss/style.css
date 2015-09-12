@@ -1570,6 +1570,7 @@ article.plan-block .plan-block-ribbon li {
   width: 33.333%;
   margin-right: -5px;
   text-align: center;
+  vertical-align: top;
 }
 @media only screen and (min-width: 769px) {
   article.plan-block .plan-block-ribbon li {
@@ -1579,6 +1580,7 @@ article.plan-block .plan-block-ribbon li {
 }
 article.plan-block .plan-block-ribbon li .ribbon-label {
   text-align: center;
+  display: block;
   font-weight: bolder;
   font-size: 16px;
   font-size: 1rem;
@@ -1589,6 +1591,7 @@ article.plan-block .plan-block-ribbon li .ribbon-label {
 }
 article.plan-block .plan-block-ribbon li .ribbon-value {
   text-align: center;
+  display: block;
   font-weight: bolder;
   vertical-align: middle;
   font-size: 22px;

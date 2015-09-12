@@ -615,12 +615,15 @@ article.plan-block{
 			width: 33.333%;
 			margin-right: -5px;
 			text-align: center;
+			vertical-align: top;
+			
 			@include bp(sml) {
 				width: 100%;
 				margin-right: 0;
 			}
 			.ribbon-label{
 				text-align: center;
+				display: block;
 				font-weight: bolder;
 				@include font-size(16);
 				@include line-height(16);
@@ -629,6 +632,7 @@ article.plan-block{
 			}
 			.ribbon-value {
 				text-align: center;
+				display: block;
 				font-weight: bolder;
 				vertical-align: middle;
 				@include font-size(22);
