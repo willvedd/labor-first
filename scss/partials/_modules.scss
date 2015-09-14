@@ -83,306 +83,6 @@
 
 
 /********************
-** Homepage
-********************/
-#home{
-	background-color: $c-blue-dark;
-	background-image: url(../images/background_image.png);
-	background-size: cover;
-	background-position: 50% 50%;
-	position: relative;
-	color: $c-white;
-
-	&:after{
-		position: absolute;
-		top: 0;
-		left: 0;
-		content: "";
-		display: block;
-		height: 100%;
-		width: 100%;
-		background-color: $c-blue-dark;
-		opacity: .75;
-	}
-
-	a{
-		color: $c-white;
-	}
-
-	.header{
-		position: relative;
-    	left: 0;
-    	top: 15px;
-    	@include bp(sml) {
-    		top: 35px;
-    	}
-    	@include bp(med) {
-    		top: 50px;
-    	}
-    	h1{
-    		@include font-size(44);
-    	}
-    	.tagline{
-			padding: 5px 0 0 0;
-			display: block;
-    		@include font-size(13);
-    		@include letter-spacing(75);
-    	}
-    	.logo-wrap{
-			display: inline-block;
-			border-bottom: 1px solid $c-white;
-		}
-		.home-nav-link{
-			display: block;
-			padding: 5px;
-			&:hover{
-				&:after{
-					margin-left: 8px;
-				}
-			}
-			&:after{
-				content: "";
-				display: inline-block;
-				border-left: 8px solid $c-white;
-				border-bottom: 4px solid transparent;
-				border-top: 4px solid transparent;
-				vertical-align: middle;
-				margin-left: 5px;
-				margin-top: -5px;
-				@include transition(margin-left .25s linear);
-			}
-		}
-	}
-	.home-middle{
-		max-width: 425px;
-		width: 90%;
-		position: absolute;
-		top: 50%;
-		left: 50%;
-		@include transform(translate(-50%,-50%));
-	}
-}
-
-/********************
-** Account Mangement
-********************/
-
-#home .home-account-management{
-	.home-account-management-copy{
-		margin-bottom: 40px;
-		border-bottom: 1px solid $c-white;
-		p{
-			@include font-size(18);
-			@include line-height(18);
-			padding-bottom: 20px;
-			padding-top: 15px;
-			@include bp(sml) {
-				padding-top: 25px;
-				@include font-size(20);
-				@include line-height(20);
-			}
-			
-		}
-	}
-	.home-account-management-title{
-		@include font-size(30);
-		font-weight: bold;
-	}
-
-	.call-to-action{
-		width: 40%;
-		margin-right: -5px;
-		margin-left: 10%;
-		opacity: .5;
-		pointer-events: none;
-		cursor: not-allowed;
-		@include transition(all .25s ease-in-out);
-	}
-
-	&.error{
-		.home-account-management-title{
-			color: $c-red;
-		}
-	}
-	&.error-first{
-
-	}
-	&.error-last{
-
-	}
-	&.error-social{
-
-	}
-	&.allValid{
-		.call-to-action{
-			opacity: 1;
-			pointer-events: all;
-			cursor: pointer;
-			background-color: $c-green;
-			&:hover{
-				background-color: darken($c-green,7);
-			}
-		}
-	}
-}
-.home-introduction{
-	max-width: 800px;
-	text-align: center;
-
-	p{
-		padding: 30px 0px;
-		@include font-size(26);
-		@include line-height(28);
-		@include bp(sml) {
-			padding: 35px 0px;
-			@include font-size(36);
-			@include line-height(36);
-		}
-		@include bp(med) {
-			padding: 50px 0px;
-			@include font-size(42);
-			@include line-height(42);
-		}
-	}
-	.enroll-sub{
-		padding-top: 20px;
-		@include font-size(18);
-	}
-}
-
-
-/********************
-** Dashboard page
-********************/
-body.dashboard{
-	.header{
-		background-color: $c-blue-dark;
-		padding: 10px;
-		@include bp(sml) {
-			padding: 20px;
-		}
-
-		.logo-wrap{
-			width: 100%;
-			text-align: left;
-			display: inline-block;
-			@include bp(sml) {
-				width: 50%;
-			}
-		}
-	}
-
-	
-	.dashboard-banner{
-		background-color: $c-white;
-		color: $c-blue-dark;
-		padding: 25px 0;
-		@include bp(sml) {
-			padding: 35px;
-		}
-		@include bp(med) {
-			padding: 50px 0;
-		}
-
-		.dashboard-banner-left{
-			display: inline-block;
-			vertical-align: top;
-			width: 100%;
-			padding: 0 20px;
-			@include bp(sml) {
-				width: 66.666%;
-				border-right: 1px solid $c-gray;
-			}
-
-			h1.dashboard-banner-heading{
-				@include font-size(32);
-					@include line-height(32);
-				@include bp(sml){
-					@include font-size(36);
-					@include line-height(36);
-				}
-				@include bp(med){
-					@include font-size(42);
-					@include line-height(42);
-				}
-				@include bp(lrg){
-					@include font-size(45);
-					@include line-height(45);
-				}
-			}
-			span.dashboard-banner-subheading{
-				@include font-size(18);
-				@include line-height(30);
-
-				@include bp(med){
-					@include font-size(20);
-					@include line-height(36);
-				}
-				@include bp(lrg){
-					@include font-size(24);
-					@include line-height(40);
-				}
-			}
-		}
-		.dashboard-banner-right{
-			display: inline-block;
-			vertical-align: top;
-			width: 100%;
-			margin-left: -5px;
-			padding: 0 20px;
-			@include bp(sml) {
-				width: 33.333%;
-			}
-		}
-		.dashboard-banner-logo{
-			
-			max-width: 200px;
-			padding: 15px 0;
-			width: 50%;
-			@include bp(sml) {
-				width: auto;
-				margin: 0 auto;
-				padding: 0;
-			}
-		}
-	}
-
-	.dashboard-main{
-		background-color: $c-gray-light;
-		.dasbhoard-main-message{
-			padding: 25px 0;
-			color: $c-blue-dark;
-			@include bp(sml){ 
-				padding: 50px 0;
-			}
-			@include bp(med){ 
-				padding: 65px 0;
-			}
-			p{
-				@include font-size(18);
-				@include line-height(26);
-
-				@include bp(sml){ 
-					@include font-size(20);
-					@include line-height(30);
-				}
-			}
-		}
-	}
-}
-/********************
-** Plan select page
-********************/
-body.plan-select{
-	.dashboard-banner{
-		.dashboard-banner-left{
-			border-right: none;
-			width: 100%;
-			text-align: center;
-		}
-	}
-}
-/********************
 ** General dashboard block class
 ********************/
 .dashboard-block{
@@ -512,6 +212,21 @@ body.plan-select{
 			color: $c-white;
 		}
 	}
+	&.unselected{
+		.enrollment-status-value{
+			color: $c-red;
+		}
+		.dashboard-block-enrollment-inner{
+			text-align: center;
+			p{
+				@include font-size(18);
+				@include line-height(20);
+			}
+			.cta{
+				margin-top: 50px;
+			}
+		}
+	}
 }
 
 
@@ -616,7 +331,7 @@ article.plan-block{
 			margin-right: -5px;
 			text-align: center;
 			vertical-align: top;
-			
+
 			@include bp(sml) {
 				width: 100%;
 				margin-right: 0;
@@ -656,6 +371,24 @@ article.plan-block{
 				}
 			}
 		}
+		// .ribbony-left,.ribbony-right{
+		// 	position: absolute;
+		// 	display: block;
+		// 	top: 100%;
+		// 	height: 25px;
+		// 	width: 50%;
+		// 	background-color: $c-white;
+		// }
+		// .ribbony-left{
+		// 	left: 0;
+		// 	border-right: 55px solid rgba(0, 0, 0, 0);
+  //   		border-top: 25px solid $c-white;
+		// }
+		// .ribbony-right{
+		// 	right: 0;
+		// 	border-left: 55px solid rgba(0, 0, 0, 0);
+  //   		border-top: 25px solid $c-white;
+		// }
 	}
 	.plan-block-footer{
 		display: block;
@@ -692,6 +425,7 @@ article.plan-block{
 			}
 		}
 	}
+
 	.dashboard-block-cta-bottom{
 		display: none;
 		background-color: $c-green;

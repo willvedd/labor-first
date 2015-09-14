@@ -832,6 +832,40 @@ figure {
   padding: 15px 25px;
   border-radius: 50px;
 }
+.btn.cta {
+  margin: 10px;
+  padding: 20px;
+  display: inline-block;
+  text-transform: uppercase;
+  font-size: 20px;
+  font-size: 1.25rem;
+  letter-spacing: 0.025em;
+  font-weight: bolder;
+  border-radius: 3px;
+  text-decoration: none;
+  -webkit-transition: background-color 0.25s ease-in-out;
+  -moz-transition: background-color 0.25s ease-in-out;
+  -ms-transition: background-color 0.25s ease-in-out;
+  -o-transition: background-color 0.25s ease-in-out;
+  transition: background-color 0.25s ease-in-out;
+}
+@media only screen and (min-width: 769px) {
+  .btn.cta {
+    padding: 20px 35px;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .btn.cta {
+    padding: 20px 50px;
+  }
+}
+.btn.cta.blue {
+  background-color: #13b6eb;
+  color: #FFFFFF;
+}
+.btn.cta.blue:hover {
+  background-color: #109cca;
+}
 
 /********************
 ** Navigation
@@ -874,94 +908,6 @@ nav.main-nav a:after {
 /********************
 ** Footer
 ********************/
-/********************
-** Inputs
-********************/
-.label-standard {
-  position: relative;
-  text-transform: uppercase;
-  font-size: 14px;
-  font-size: 0.875rem;
-  line-height: 14px;
-  line-height: 0.875rem;
-  padding-left: 5px;
-  text-transform: uppercase;
-  font-weight: 600;
-  display: inline-block;
-  width: 100%;
-  white-space: nowrap;
-}
-.label-standard input {
-  display: block;
-  width: 100%;
-  background-color: #FFFFFF;
-  border-radius: 5px;
-  border: 3px solid #b7b7b7;
-  padding: 12px 10px;
-  color: #3c3f41;
-  font-size: 18px;
-  font-size: 1.125rem;
-  font-weight: 600;
-  margin-bottom: 20px;
-  margin-top: 5px;
-  -webkit-transition: all 0.25s ease-in-out;
-  -moz-transition: all 0.25s ease-in-out;
-  -ms-transition: all 0.25s ease-in-out;
-  -o-transition: all 0.25s ease-in-out;
-  transition: all 0.25s ease-in-out;
-}
-.label-standard input:focus {
-  border-color: #13b6eb;
-}
-.label-standard:before, .label-standard:after {
-  font-size: 34px;
-  font-size: 2.125rem;
-  font-family: "Genericons";
-  display: block;
-  position: absolute;
-  top: 50%;
-  -webkit-transition: opacity 0.25s ease-in-out;
-  -moz-transition: opacity 0.25s ease-in-out;
-  -ms-transition: opacity 0.25s ease-in-out;
-  -o-transition: opacity 0.25s ease-in-out;
-  transition: opacity 0.25s ease-in-out;
-  opacity: 0;
-}
-.label-standard:before {
-  content: "\f431";
-  color: #FFFFFF;
-  left: -35px;
-  -webkit-transform: translateY(-50%) rotate(-90deg);
-  -moz-transform: translateY(-50%) rotate(-90deg);
-  -ms-transform: translateY(-50%) rotate(-90deg);
-  -o-transform: translateY(-50%) rotate(-90deg);
-  transform: translateY(-50%) rotate(-90deg);
-}
-.label-standard:after {
-  right: 10px;
-  -webkit-transform: translateY(-50%);
-  -moz-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  -o-transform: translateY(-50%);
-  transform: translateY(-50%);
-}
-.label-standard.focus:before {
-  opacity: .5;
-}
-.label-standard.invalid:after {
-  opacity: 1;
-  color: #f26c4f;
-  content: "";
-}
-.label-standard.valid:after {
-  opacity: 1;
-  color: #27c085;
-  content: "";
-}
-.label-standard.half {
-  width: 50%;
-}
-
 /********************
 ** Homepage
 ********************/
@@ -1309,6 +1255,103 @@ body.plan-select .dashboard-banner .dashboard-banner-left {
 }
 
 /********************
+** Plan confirm
+********************/
+body.plan-confirm .dashboard-banner .dashboard-banner-left {
+  border-right: none;
+  width: 100%;
+  text-align: center;
+}
+
+/********************
+** Inputs
+********************/
+.label-standard {
+  position: relative;
+  text-transform: uppercase;
+  font-size: 14px;
+  font-size: 0.875rem;
+  line-height: 14px;
+  line-height: 0.875rem;
+  padding-left: 5px;
+  text-transform: uppercase;
+  font-weight: 600;
+  display: inline-block;
+  width: 100%;
+  white-space: nowrap;
+}
+.label-standard input {
+  display: block;
+  width: 100%;
+  background-color: #FFFFFF;
+  border-radius: 5px;
+  border: 3px solid #b7b7b7;
+  padding: 12px 10px;
+  color: #3c3f41;
+  font-size: 18px;
+  font-size: 1.125rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+  margin-top: 5px;
+  -webkit-transition: all 0.25s ease-in-out;
+  -moz-transition: all 0.25s ease-in-out;
+  -ms-transition: all 0.25s ease-in-out;
+  -o-transition: all 0.25s ease-in-out;
+  transition: all 0.25s ease-in-out;
+}
+.label-standard input:focus {
+  border-color: #13b6eb;
+}
+.label-standard:before, .label-standard:after {
+  font-size: 34px;
+  font-size: 2.125rem;
+  font-family: "Genericons";
+  display: block;
+  position: absolute;
+  top: 50%;
+  -webkit-transition: opacity 0.25s ease-in-out;
+  -moz-transition: opacity 0.25s ease-in-out;
+  -ms-transition: opacity 0.25s ease-in-out;
+  -o-transition: opacity 0.25s ease-in-out;
+  transition: opacity 0.25s ease-in-out;
+  opacity: 0;
+}
+.label-standard:before {
+  content: "\f431";
+  color: #FFFFFF;
+  left: -35px;
+  -webkit-transform: translateY(-50%) rotate(-90deg);
+  -moz-transform: translateY(-50%) rotate(-90deg);
+  -ms-transform: translateY(-50%) rotate(-90deg);
+  -o-transform: translateY(-50%) rotate(-90deg);
+  transform: translateY(-50%) rotate(-90deg);
+}
+.label-standard:after {
+  right: 10px;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+.label-standard.focus:before {
+  opacity: .5;
+}
+.label-standard.invalid:after {
+  opacity: 1;
+  color: #f26c4f;
+  content: "";
+}
+.label-standard.valid:after {
+  opacity: 1;
+  color: #27c085;
+  content: "";
+}
+.label-standard.half {
+  width: 50%;
+}
+
+/********************
 ** General dashboard block class
 ********************/
 .dashboard-block {
@@ -1451,6 +1494,21 @@ body.plan-select .dashboard-banner .dashboard-banner-left {
 .dashboard-block-enrollment.active .enrollment-header {
   background-color: #27c085;
   color: #FFFFFF;
+}
+.dashboard-block-enrollment.unselected .enrollment-status-value {
+  color: #f26c4f;
+}
+.dashboard-block-enrollment.unselected .dashboard-block-enrollment-inner {
+  text-align: center;
+}
+.dashboard-block-enrollment.unselected .dashboard-block-enrollment-inner p {
+  font-size: 18px;
+  font-size: 1.125rem;
+  line-height: 20px;
+  line-height: 1.25rem;
+}
+.dashboard-block-enrollment.unselected .dashboard-block-enrollment-inner .cta {
+  margin-top: 50px;
 }
 
 /********************
