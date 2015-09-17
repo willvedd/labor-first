@@ -1,0 +1,107 @@
+/********************
+** Inputs Login
+********************/
+.label-standard{
+	position: relative;
+	text-transform: uppercase;
+	@include font-size(14);
+	@include line-height(14);
+	padding-left: 5px;
+	text-transform: uppercase;
+	font-weight: 600;
+	display: inline-block;
+	width: 100%;
+	white-space: nowrap;
+
+	input{
+		display: block;
+		width: 100%;
+		background-color: $c-white;
+		border-radius: 5px;
+		border: 3px solid $c-gray;
+		padding: 12px 10px;
+		color: $c-base;
+		@include font-size(18);
+		//text-transform: uppercase;
+		font-weight: 600;
+		margin-bottom: 20px;
+	    margin-top: 5px;
+		@include transition(all .25s ease-in-out);
+
+		&:focus{
+			border-color: $c-blue-light;
+		}
+	}
+
+	&:before,&:after{
+		@include font-size(34);
+		font-family: $f-icons;
+		display: block;
+		position: absolute;
+		top: 50%;
+		
+		@include transition(opacity .25s ease-in-out);
+		opacity: 0;
+	}
+
+	&:before{
+		content: "\f431";
+		color: $c-white;
+		left: -35px;
+		@include transform(translateY(-50%) rotate(-90deg));
+	}
+	&:after{
+		right: 10px;
+		@include transform(translateY(-50%));
+	}
+
+	
+	&.focus{
+		&:before{
+			opacity: .5;
+		}
+	}
+	&.invalid{
+		&:after{
+			opacity: 1;
+			color: $c-red;
+			content: "\f405"
+		}
+	}
+	&.valid{
+		&:after{
+			opacity: 1;
+			color: $c-green;
+			content: "\f418"
+		}
+	}
+
+	&.half{
+		width: 50%;
+	}
+}
+
+/********************
+** Inputs Dashboard
+********************/
+label.input-dash{
+	text-transform: uppercase;
+	@include font-size(15);
+	padding-left: 15px;
+	margin-bottom: 15px;
+
+	input,select{
+		border: 3px solid $c-gray-light;
+		border-radius: 4px;
+		width: 100%;
+		box-shadow: 1px 1px 5px 0px $c-gray;
+		padding: 15px 10px;
+		background-color: $c-white;
+		font-weight: bolder;
+		@include font-size(18);
+		@include line-height(20);
+		@include letter-spacing(25);
+		margin-bottom: 15px;
+	}
+}
+

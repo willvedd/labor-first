@@ -311,4 +311,71 @@ body.plan-confirm{
 	}
 }
 
+/********************
+** Two Column pages (billing, edit profile,contact,)
+********************/
+%two-col{
+	.dashboard-banner-left{
+		border-right: none!important;
+		width: 100%!important;
+		text-align: center;
+	}
+	.column-left,.column-right{
+		@include bp(sml) {
+			width: 50%;
+			display: inline-block;
+			margin-left: -4px;
+			vertical-align: top;
+		}
+		.column-inner{
+			padding: 30px;
+			@include bp(sml) {
+				padding: 30px 50px;
+			}
+			@include bp(med) {
+				padding: 30px 70px;
+			}
+		}
+	}
+	.column-left{
+		//background-color: darken($c-gray-light,7);
+	}
+	.column-right{
+		.right-col-heading{
+			@include font-size(18);
+			color: $c-blue-dark;
+			text-transform: uppercase;
+			font-weight: bolder;
+		}
+	}
+	hr{
+		height: 1px;
+    	background-color: $c-gray;
+    	margin: 20px 0;
+	}
+}
+
+
+
+.edit-profile{
+	background-color: $c-gray-light;
+	@extend %two-col;
+	.profile-current-block{
+		text-align: center;
+		h1{
+			@include font-size(18);
+			color: $c-blue-dark;
+			text-transform: uppercase;
+			font-weight: bolder;
+		}
+		.profile-current-block-label{
+			color: $c-blue-dark;
+			padding-right: 5px;
+		}
+	}
+
+}
+
+
+
 

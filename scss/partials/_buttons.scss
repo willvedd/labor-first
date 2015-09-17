@@ -12,6 +12,7 @@
 		border: 1px solid $c-white;
 		font-weight: 800;
 		text-transform: uppercase;
+		text-decoration: none;
 		@include font-size(16);
 		@include transition(background-color .25s ease-in-out);
 

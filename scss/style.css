@@ -796,6 +796,7 @@ figure {
   border: 1px solid #FFFFFF;
   font-weight: 800;
   text-transform: uppercase;
+  text-decoration: none;
   font-size: 16px;
   font-size: 1rem;
   -webkit-transition: background-color 0.25s ease-in-out;
@@ -1261,6 +1262,66 @@ body.plan-confirm .dashboard-banner .dashboard-banner-left {
   border-right: none;
   width: 100%;
   text-align: center;
+}
+
+/********************
+** Two Column pages (billing, edit profile,contact,)
+********************/
+.edit-profile .dashboard-banner-left {
+  border-right: none !important;
+  width: 100% !important;
+  text-align: center;
+}
+@media only screen and (min-width: 769px) {
+  .edit-profile .column-left, .edit-profile .column-right {
+    width: 50%;
+    display: inline-block;
+    margin-left: -4px;
+    vertical-align: top;
+  }
+}
+.edit-profile .column-left .column-inner, .edit-profile .column-right .column-inner {
+  padding: 30px;
+}
+@media only screen and (min-width: 769px) {
+  .edit-profile .column-left .column-inner, .edit-profile .column-right .column-inner {
+    padding: 30px 50px;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .edit-profile .column-left .column-inner, .edit-profile .column-right .column-inner {
+    padding: 30px 70px;
+  }
+}
+.edit-profile .column-right .right-col-heading {
+  font-size: 18px;
+  font-size: 1.125rem;
+  color: #00519b;
+  text-transform: uppercase;
+  font-weight: bolder;
+}
+.edit-profile hr {
+  height: 1px;
+  background-color: #b7b7b7;
+  margin: 20px 0;
+}
+
+.edit-profile {
+  background-color: #f6f7f7;
+}
+.edit-profile .profile-current-block {
+  text-align: center;
+}
+.edit-profile .profile-current-block h1 {
+  font-size: 18px;
+  font-size: 1.125rem;
+  color: #00519b;
+  text-transform: uppercase;
+  font-weight: bolder;
+}
+.edit-profile .profile-current-block .profile-current-block-label {
+  color: #00519b;
+  padding-right: 5px;
 }
 
 /********************
@@ -1734,4 +1795,118 @@ article.plan-block.selectable .dashboard-block-cta-bottom {
   .plan-block-container {
     padding: 12px;
   }
+}
+
+/********************
+** Inputs Login
+********************/
+.label-standard {
+  position: relative;
+  text-transform: uppercase;
+  font-size: 14px;
+  font-size: 0.875rem;
+  line-height: 14px;
+  line-height: 0.875rem;
+  padding-left: 5px;
+  text-transform: uppercase;
+  font-weight: 600;
+  display: inline-block;
+  width: 100%;
+  white-space: nowrap;
+}
+.label-standard input {
+  display: block;
+  width: 100%;
+  background-color: #FFFFFF;
+  border-radius: 5px;
+  border: 3px solid #b7b7b7;
+  padding: 12px 10px;
+  color: #3c3f41;
+  font-size: 18px;
+  font-size: 1.125rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+  margin-top: 5px;
+  -webkit-transition: all 0.25s ease-in-out;
+  -moz-transition: all 0.25s ease-in-out;
+  -ms-transition: all 0.25s ease-in-out;
+  -o-transition: all 0.25s ease-in-out;
+  transition: all 0.25s ease-in-out;
+}
+.label-standard input:focus {
+  border-color: #13b6eb;
+}
+.label-standard:before, .label-standard:after {
+  font-size: 34px;
+  font-size: 2.125rem;
+  font-family: "Genericons";
+  display: block;
+  position: absolute;
+  top: 50%;
+  -webkit-transition: opacity 0.25s ease-in-out;
+  -moz-transition: opacity 0.25s ease-in-out;
+  -ms-transition: opacity 0.25s ease-in-out;
+  -o-transition: opacity 0.25s ease-in-out;
+  transition: opacity 0.25s ease-in-out;
+  opacity: 0;
+}
+.label-standard:before {
+  content: "\f431";
+  color: #FFFFFF;
+  left: -35px;
+  -webkit-transform: translateY(-50%) rotate(-90deg);
+  -moz-transform: translateY(-50%) rotate(-90deg);
+  -ms-transform: translateY(-50%) rotate(-90deg);
+  -o-transform: translateY(-50%) rotate(-90deg);
+  transform: translateY(-50%) rotate(-90deg);
+}
+.label-standard:after {
+  right: 10px;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+.label-standard.focus:before {
+  opacity: .5;
+}
+.label-standard.invalid:after {
+  opacity: 1;
+  color: #f26c4f;
+  content: "";
+}
+.label-standard.valid:after {
+  opacity: 1;
+  color: #27c085;
+  content: "";
+}
+.label-standard.half {
+  width: 50%;
+}
+
+/********************
+** Inputs Dashboard
+********************/
+label.input-dash {
+  text-transform: uppercase;
+  font-size: 15px;
+  font-size: 0.9375rem;
+  padding-left: 15px;
+  margin-bottom: 15px;
+}
+label.input-dash input, label.input-dash select {
+  border: 3px solid #f6f7f7;
+  border-radius: 4px;
+  width: 100%;
+  box-shadow: 1px 1px 5px 0px #b7b7b7;
+  padding: 15px 10px;
+  background-color: #FFFFFF;
+  font-weight: bolder;
+  font-size: 18px;
+  font-size: 1.125rem;
+  line-height: 20px;
+  line-height: 1.25rem;
+  letter-spacing: 0.025em;
+  margin-bottom: 15px;
 }
