@@ -302,12 +302,28 @@ body.plan-select{
 ** Plan confirm
 ********************/
 body.plan-confirm{
+	.page-container{
+		overflow: auto;//cleafix
+		zoom:1;//clearfix
+	}
+	.dashboard-full{
+		margin-bottom: 50px;
+	}
 	.dashboard-banner{
 		.dashboard-banner-left{
 			border-right: none;
 			width: 100%;
 			text-align: center;
 		}
+	}
+	h1{
+		text-align: center;
+	    font-weight: bolder;
+	    text-transform: uppercase;
+	    @include font-size(22);
+	}
+	.dasbhoard-main-message{
+		text-align: center;
 	}
 }
 
@@ -371,6 +387,23 @@ body.plan-confirm{
 		.profile-current-block-label{
 			color: $c-blue-dark;
 			padding-right: 5px;
+		}
+		p{
+			margin: 20px 0;
+		}
+		a.go-back{
+			color: $c-base;
+			text-transform: uppercase;
+			vertical-align: middle;
+			display: inline-block;
+
+			&:before{
+				content: '\f430';
+				display: inline-block;
+				font-family: $f-icons;
+				vertical-align: middle;
+				@include font-size(20);
+			}
 		}
 	}
 
