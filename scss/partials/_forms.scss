@@ -39,14 +39,12 @@
 		display: block;
 		position: absolute;
 		top: 50%;
-		
-		@include transition(opacity .25s ease-in-out);
-		opacity: 0;
+		@include transition(color .25s ease-in-out);
 	}
 
 	&:before{
 		content: "\f431";
-		color: $c-white;
+		color: rgba($c-white,0);
 		left: -35px;
 		@include transform(translateY(-50%) rotate(-90deg));
 	}
@@ -58,7 +56,7 @@
 	
 	&.focus{
 		&:before{
-			opacity: .5;
+			color: rgba($c-white,.5);
 		}
 	}
 	&.invalid{

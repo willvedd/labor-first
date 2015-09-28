@@ -1842,16 +1842,15 @@ article.plan-block.selectable .dashboard-block-cta-bottom {
   display: block;
   position: absolute;
   top: 50%;
-  -webkit-transition: opacity 0.25s ease-in-out;
-  -moz-transition: opacity 0.25s ease-in-out;
-  -ms-transition: opacity 0.25s ease-in-out;
-  -o-transition: opacity 0.25s ease-in-out;
-  transition: opacity 0.25s ease-in-out;
-  opacity: 0;
+  -webkit-transition: color 0.25s ease-in-out;
+  -moz-transition: color 0.25s ease-in-out;
+  -ms-transition: color 0.25s ease-in-out;
+  -o-transition: color 0.25s ease-in-out;
+  transition: color 0.25s ease-in-out;
 }
 .label-standard:before {
   content: "\f431";
-  color: #FFFFFF;
+  color: rgba(255, 255, 255, 0);
   left: -35px;
   -webkit-transform: translateY(-50%) rotate(-90deg);
   -moz-transform: translateY(-50%) rotate(-90deg);
@@ -1868,7 +1867,7 @@ article.plan-block.selectable .dashboard-block-cta-bottom {
   transform: translateY(-50%);
 }
 .label-standard.focus:before {
-  opacity: .5;
+  color: rgba(255, 255, 255, 0.5);
 }
 .label-standard.invalid:after {
   opacity: 1;
