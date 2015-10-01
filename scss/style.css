@@ -456,6 +456,10 @@ th {
   color: #f26c4f;
 }
 
+.text-green {
+  color: #27c085;
+}
+
 /********************
 ** Font Config
 ********************/
@@ -564,6 +568,7 @@ a {
 .phone {
   color: #13b6eb;
   font-weight: bolder;
+  white-space: nowrap;
 }
 
 * {
@@ -833,6 +838,12 @@ figure {
   padding: 15px 25px;
   border-radius: 50px;
 }
+.btn.pill.wide {
+  width: 66.66%;
+  max-width: 300px;
+  padding: 15px 25px;
+  border-radius: 50px;
+}
 .btn.cta {
   margin: 10px;
   padding: 20px;
@@ -866,6 +877,30 @@ figure {
 }
 .btn.cta.blue:hover {
   background-color: #109cca;
+}
+
+a.go-back {
+  text-transform: uppercase;
+  vertical-align: middle;
+  display: inline-block;
+}
+a.go-back:before {
+  content: '\f430';
+  display: inline-block;
+  font-family: "Genericons";
+  vertical-align: bottom;
+  font-size: 20px;
+  font-size: 1.25rem;
+  position: relative;
+  left: 0;
+  -webkit-transition: left 0.25s ease-in-out;
+  -moz-transition: left 0.25s ease-in-out;
+  -ms-transition: left 0.25s ease-in-out;
+  -o-transition: left 0.25s ease-in-out;
+  transition: left 0.25s ease-in-out;
+}
+a.go-back:hover:before {
+  left: -4px;
 }
 
 /********************
@@ -1284,40 +1319,56 @@ body.plan-confirm .dasbhoard-main-message {
 /********************
 ** Two Column pages (billing, edit profile,contact,)
 ********************/
-.edit-profile .dashboard-banner-left {
+.edit-profile .dashboard-banner-left, .billing-info .dashboard-banner-left {
   border-right: none !important;
   width: 100% !important;
   text-align: center;
 }
 @media only screen and (min-width: 769px) {
-  .edit-profile .column-left, .edit-profile .column-right {
+  .edit-profile .column-left, .billing-info .column-left, .edit-profile .column-right, .billing-info .column-right {
     width: 50%;
     display: inline-block;
     margin-left: -4px;
     vertical-align: top;
   }
 }
-.edit-profile .column-left .column-inner, .edit-profile .column-right .column-inner {
+.edit-profile .column-left .column-inner, .billing-info .column-left .column-inner, .edit-profile .column-right .column-inner, .billing-info .column-right .column-inner {
   padding: 30px;
 }
 @media only screen and (min-width: 769px) {
-  .edit-profile .column-left .column-inner, .edit-profile .column-right .column-inner {
+  .edit-profile .column-left .column-inner, .billing-info .column-left .column-inner, .edit-profile .column-right .column-inner, .billing-info .column-right .column-inner {
     padding: 30px 50px;
   }
 }
 @media only screen and (min-width: 1024px) {
-  .edit-profile .column-left .column-inner, .edit-profile .column-right .column-inner {
+  .edit-profile .column-left .column-inner, .billing-info .column-left .column-inner, .edit-profile .column-right .column-inner, .billing-info .column-right .column-inner {
     padding: 30px 70px;
   }
 }
-.edit-profile .column-right .right-col-heading {
+.edit-profile .column-left .column-inner, .billing-info .column-left .column-inner {
+  padding-bottom: 0;
+}
+@media only screen and (min-width: 769px) {
+  .edit-profile .column-left .column-inner, .billing-info .column-left .column-inner {
+    padding-bottom: 30px;
+  }
+}
+.edit-profile .column-right .right-col-heading, .billing-info .column-right .right-col-heading {
   font-size: 18px;
   font-size: 1.125rem;
   color: #00519b;
   text-transform: uppercase;
   font-weight: bolder;
 }
-.edit-profile hr {
+.edit-profile .column-right .column-inner, .billing-info .column-right .column-inner {
+  padding-top: 0;
+}
+@media only screen and (min-width: 769px) {
+  .edit-profile .column-right .column-inner, .billing-info .column-right .column-inner {
+    padding-top: 30px;
+  }
+}
+.edit-profile hr, .billing-info hr {
   height: 1px;
   background-color: #b7b7b7;
   margin: 20px 0;
@@ -1343,19 +1394,71 @@ body.plan-confirm .dasbhoard-main-message {
 .edit-profile .profile-current-block p {
   margin: 20px 0;
 }
-.edit-profile .profile-current-block a.go-back {
-  color: #3c3f41;
-  text-transform: uppercase;
-  vertical-align: middle;
-  display: inline-block;
+
+/********************
+** Billing Info
+********************/
+.billing-info .billing-banner {
+  text-align: center;
+  padding: 20px;
 }
-.edit-profile .profile-current-block a.go-back:before {
-  content: '\f430';
-  display: inline-block;
-  font-family: "Genericons";
-  vertical-align: middle;
-  font-size: 20px;
-  font-size: 1.25rem;
+@media only screen and (min-width: 769px) {
+  .billing-info .billing-banner {
+    padding: 40px;
+  }
+}
+.billing-info .billing-banner .billing-banner-heading {
+  font-size: 28px;
+  font-size: 1.75rem;
+  line-height: 28px;
+  line-height: 1.75rem;
+  padding-bottom: 10px;
+  display: block;
+}
+@media only screen and (min-width: 769px) {
+  .billing-info .billing-banner .billing-banner-heading {
+    padding-bottom: 25px;
+    font-size: 36px;
+    font-size: 2.25rem;
+    line-height: 36px;
+    line-height: 2.25rem;
+  }
+}
+.billing-info .column-inner h2 {
+  font-size: 18px;
+  font-size: 1.125rem;
+  color: #00519b;
+  text-transform: uppercase;
+  font-weight: bolder;
+  margin: 20px 0;
+}
+.billing-info img.check {
+  box-shadow: 0 0 10px 0px #BDC1C3;
+}
+.billing-info .support-block-in-column {
+  display: none;
+}
+@media only screen and (min-width: 1024px) {
+  .billing-info .support-block-in-column {
+    display: block;
+  }
+}
+.billing-info .support-block-at-bottom {
+  display: block;
+}
+@media only screen and (min-width: 1024px) {
+  .billing-info .support-block-at-bottom {
+    display: none;
+  }
+}
+.billing-info .submit-contain {
+  text-align: center;
+  padding: 50px 0 75px;
+}
+@media only screen and (min-width: 769px) {
+  .billing-info .submit-contain {
+    padding: 100px 0;
+  }
 }
 
 /********************
@@ -1907,4 +2010,37 @@ label.input-dash input, label.input-dash select, label.input-dash textarea {
   line-height: 1.25rem;
   letter-spacing: 0.025em;
   margin-bottom: 15px;
+}
+
+label.input-dash-bool {
+  display: inline-block;
+  vertical-align: middle;
+  width: 50%;
+  margin-left: -3px;
+  margin-bottom: 15px;
+}
+label.input-dash-bool input {
+  display: inline-block;
+  vertical-align: middle;
+  border: 3px solid #f6f7f7;
+  box-shadow: 1px 1px 5px 0px #b7b7b7;
+  height: 25px;
+  width: 25px;
+  cursor: pointer;
+  background-color: #FFFFFF;
+  -webkit-transition: background-color 0.25s ease-in-out;
+  -moz-transition: background-color 0.25s ease-in-out;
+  -ms-transition: background-color 0.25s ease-in-out;
+  -o-transition: background-color 0.25s ease-in-out;
+  transition: background-color 0.25s ease-in-out;
+}
+label.input-dash-bool input:checked {
+  background-color: #13b6eb;
+}
+label.input-dash-bool .actual-label {
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 15px;
+  font-size: 0.9375rem;
+  padding-left: 15px;
 }

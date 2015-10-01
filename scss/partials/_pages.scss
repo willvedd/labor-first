@@ -355,6 +355,12 @@ body.plan-confirm{
 	}
 	.column-left{
 		//background-color: darken($c-gray-light,7);
+		.column-inner{
+			padding-bottom: 0;
+			@include bp(sml) {
+				padding-bottom: 30px;
+			}
+		}
 	}
 	.column-right{
 		.right-col-heading{
@@ -362,6 +368,12 @@ body.plan-confirm{
 			color: $c-blue-dark;
 			text-transform: uppercase;
 			font-weight: bolder;
+		}
+		.column-inner{
+			padding-top: 0;
+			@include bp(sml) {
+				padding-top: 30px;
+			}
 		}
 	}
 	hr{
@@ -391,24 +403,66 @@ body.plan-confirm{
 		p{
 			margin: 20px 0;
 		}
-		a.go-back{
-			color: $c-base;
-			text-transform: uppercase;
-			vertical-align: middle;
-			display: inline-block;
-
-			&:before{
-				content: '\f430';
-				display: inline-block;
-				font-family: $f-icons;
-				vertical-align: middle;
-				@include font-size(20);
-			}
-		}
 	}
 
 }
+/********************
+** Billing Info
+********************/
+.billing-info{
+	@extend %two-col;
 
+	.billing-banner{
+	    text-align: center;
+    	padding: 20px;
+    	@include bp(sml) {
+    		padding: 40px;
+    	}
+    	
+    	.billing-banner-heading{
+    		@include font-size(28);
+    		@include line-height(28);
+    		padding-bottom: 10px;
+    		display: block;
+    		@include bp(sml) {
+    			padding-bottom: 25px;
+    			@include font-size(36);
+    			@include line-height(36);
+    		}
+    	}
+	}
 
+	.column-inner{
+		h2{
+			@include font-size(18);
+			color: $c-blue-dark;
+			text-transform: uppercase;
+			font-weight: bolder;
+			margin: 20px 0;
+		}
+	}
+	img.check{
+		box-shadow: 0 0 10px 0px #BDC1C3;
+	}
+	.support-block-in-column{
+		display: none;
+		@include bp(med) {
+			display: block;
+		}
+	}
+	.support-block-at-bottom{
+		display: block;
+		@include bp(med) {
+			display: none;
+		}
+	}
+	.submit-contain{
+		text-align: center;
+		padding: 50px 0 75px;
+		@include bp(sml) {
+			padding: 100px 0;
+		}
+	}
+}
 
 

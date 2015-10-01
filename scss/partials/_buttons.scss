@@ -39,6 +39,12 @@
 			padding: 15px 25px;	
 			border-radius: 50px;
 		}
+		&.wide{
+			width: 66.66%;
+			max-width: 300px;
+			padding: 15px 25px;
+			border-radius: 50px;
+		}
 	}
 	&.cta{
 		margin: 10px;
@@ -68,3 +74,25 @@
 	}
 }
 
+
+a.go-back{
+	text-transform: uppercase;
+	vertical-align: middle;
+	display: inline-block;
+
+	&:before{
+		content: '\f430';
+		display: inline-block;
+		font-family: $f-icons;
+		vertical-align: bottom;
+		@include font-size(20);
+		position: relative;
+		left: 0;
+		@include transition(left .25s ease-in-out);
+	}
+	&:hover{
+		&:before{
+			left: -4px;
+		}
+	}
+}
