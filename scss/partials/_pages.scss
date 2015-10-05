@@ -386,7 +386,11 @@ body.plan-confirm{
 
 
 .edit-profile{
+	position: relative;
 	background-color: $c-gray-light;
+	@include bp(sml) {
+		background-color: transparent;
+	}
 	@extend %two-col;
 	.profile-current-block{
 		text-align: center;

@@ -1375,7 +1375,13 @@ body.plan-confirm .dasbhoard-main-message {
 }
 
 .edit-profile {
+  position: relative;
   background-color: #f6f7f7;
+}
+@media only screen and (min-width: 769px) {
+  .edit-profile {
+    background-color: transparent;
+  }
 }
 .edit-profile .profile-current-block {
   text-align: center;
@@ -1897,6 +1903,41 @@ article.plan-block.selectable .dashboard-block-cta-bottom {
 }
 .dashboard-block-confirm-amount .dashboard-block-cta-bottom:hover {
   background-color: #21a270;
+}
+
+.split-bg {
+  display: none;
+}
+@media only screen and (min-width: 769px) {
+  .split-bg {
+    display: -webkit-box;
+    /* OLD - iOS 6-, Safari 3.1-6 */
+    display: -moz-box;
+    /* OLD - Firefox 19- (buggy but mostly works) */
+    display: -ms-flexbox;
+    /* TWEENER - IE 10 */
+    display: -webkit-flex;
+    /* NEW - Chrome */
+    display: flex;
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+  }
+}
+.split-bg .split-bg-left, .split-bg .split-bg-right {
+  display: inline-block;
+  vertical-align: top;
+  width: 50%;
+  height: 100%;
+}
+.split-bg .split-bg-left {
+  background-color: #f6f7f7;
+}
+.split-bg .split-bg-right {
+  background-color: #EFEFEF;
 }
 
 /********************

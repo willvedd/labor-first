@@ -409,3 +409,28 @@ article.plan-block{
 	}
 }
 
+.split-bg{
+	display: none;
+	@include bp(sml) {
+		@include flex;
+		position: absolute;
+		z-index: -1;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+	}
+	.split-bg-left,.split-bg-right{
+		display: inline-block;
+		vertical-align: top;
+		width: 50%;
+		height: 100%;
+	}
+	.split-bg-left{
+		background-color: $c-gray-light;
+	}
+	.split-bg-right{
+		background-color: #EFEFEF;
+	}
+}
+
