@@ -408,7 +408,9 @@ article.plan-block{
 		}
 	}
 }
-
+/********************
+** Split pages/ split background
+********************/
 .split-bg{
 	display: none;
 	@include bp(sml) {
@@ -431,6 +433,142 @@ article.plan-block{
 	}
 	.split-bg-right{
 		background-color: #EFEFEF;
+	}
+}
+
+/********************
+** Footer
+********************/
+footer{
+	padding: 20px;
+	background-color: $c-white;
+	@include bp(sml) {
+		padding: 30px;
+	}
+	p{
+		@include font-size(16);
+		@include line-height(20);
+		max-width: 500px;
+		margin: 0 auto;
+		@include bp(med) {
+			margin: 0;
+		}
+	}
+	.footer-inner{
+		width: 95%;
+		margin: 0 auto;
+		max-width: 1170px;
+	}
+	.footer-left,.footer-right{
+		display: block;
+		@include bp(med) {
+			display: inline-block;
+			vertical-align: middle;
+			padding: 25px;
+		}
+		@include bp(lrg) {
+			padding: 30px;
+		}
+	}
+	.footer-left{
+		@include bp(med) {
+			width: 66.666%;
+			padding-left: 0;
+			border-right: 1px solid $c-base;
+		}
+		@include bp(lrg) {
+			padding-left: 0;
+		}
+		.footer-logo,.footer-contact{
+			display: block;
+			@include bp(med) {
+				display: inline-block;
+				vertical-align: middle;
+				width: 50%;
+				margin: 0 -3px;
+			}
+		}
+		.footer-logo{
+			img{
+				max-width: 300px;
+   				max-height: 70px;
+   				margin: 0 auto;
+			}
+		}
+		.footer-contact{
+			margin: 25px 0;
+			@include bp(med) {
+				margin: 0;
+			}
+		}
+	}
+	.footer-right{
+		@include bp(med) {
+			width: 33.333%;
+			margin-left: -5px;
+			padding-right: 0;
+		}
+		@include bp(lrg) {
+			padding-right: 0;
+		}
+		.footer-social-intro,.footer-social-contain{
+			margin: 0 auto;
+			text-align: center;
+			@include bp(med) {
+				text-align: left;
+				width: 50%;
+				display: inline-block;
+				vertical-align: middle;
+				margin: 0 -3px;
+			}	
+		}
+		.footer-social-intro{
+			@include bp(med) {
+				width: 40%;
+			}
+		}
+		.footer-social-contain{
+			@include bp(med) {
+				width: 60%;
+			}
+		}
+
+
+
+		a.social{
+			&:before{
+				display: inline-block;
+				vertical-align: middle;
+				font-family: $f-icons;
+				margin: 5px;
+				font-size:34px;
+
+				@include bp(sml) {
+					font-size: 36px;
+				}
+				@include bp(med) {
+					font-size: 40px;
+				}
+			}
+			&.faboo{
+				&:before{
+					content: "\f203";
+					color: #3b5998;
+				}
+			}
+			&.linke{
+				&:before{
+					content: "\f208";
+					color: #313335;
+				}
+			}
+			&.twit{
+				&:before{
+					content: "\f202";
+					color: #55acee;
+				}
+			}
+		}
 	}
 }
 
