@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Labor First - New Enrollment</title>
+	<title>Labor First - Login</title>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="minimal-ui, width=device-width, initial-scale=1.0, user-scalable=no">
@@ -19,8 +19,8 @@
 		</header>
 		<section class="home-account-management home-middle">
 			<div class="home-account-management-copy">
-				<span class="home-account-management-title">Create a Password</span>
-				<p>Enter your email and create a password that contains eight characters and one number.</p>
+				<span class="home-account-management-title">Welcome Back!</span>
+				<p>Enter email address and password to access the enrollment dashboard.</p>
 			</div>
 
 			<label class="input-first label-standard" for="first_name">Email Address
@@ -33,12 +33,17 @@
 				<input class="" type="password"  oninput="change()" onfocus="focusThis()" data-type="password" name="password" placeholder="Enter password" required>
 				<span class="input-status"></span>
 			</label>
-			<label class="input-social label-standard" for="social">Re-enter password
-				<span class="input-focus"></span>
-				<input class="" oninput="change()" onfocus="focusThis()" data-type="password" type="password" name="password-confirm" placeholder="Confirm your password again" required>
-				<span class="input-status"></span>
-			</label>
-			<a href="#" class="btn pill call-to-action">Continue</a>
+			<div class="login-bottom">
+				<div class="login-forgot">
+					<a href="#">Forgot Password?</a>
+				</div>
+				<a href="#" class="btn pill half call-to-action">Sign In</a>
+
+				<div class="login-go-back">
+					<a href="#" class="up">Go Back</a>
+				</div>
+			</div>
+			
 		</section>
 	</div>
 </body>

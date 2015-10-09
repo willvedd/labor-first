@@ -51,6 +51,7 @@
 		.home-nav-link{
 			display: block;
 			padding: 5px;
+			text-decoration: none;
 			&:hover{
 				&:after{
 					margin-left: 8px;
@@ -73,7 +74,7 @@
 		max-width: 425px;
 		width: 90%;
 		position: absolute;
-		top: 50%;
+		top: 55%;
 		left: 50%;
 		@include transform(translate(-50%,-50%));
 	}
@@ -202,7 +203,7 @@ body.dashboard{
 
 		.dashboard-banner-left{
 			display: inline-block;
-			vertical-align: top;
+			vertical-align: middle;
 			width: 100%;
 			padding: 0 20px;
 			@include bp(sml) {
@@ -242,7 +243,7 @@ body.dashboard{
 		}
 		.dashboard-banner-right{
 			display: inline-block;
-			vertical-align: top;
+			vertical-align: middle;
 			width: 100%;
 			margin-left: -5px;
 			padding: 0 20px;
@@ -251,8 +252,8 @@ body.dashboard{
 			}
 		}
 		.dashboard-banner-logo{
-			
 			max-width: 200px;
+			max-height: 115px;
 			padding: 15px 0;
 			width: 50%;
 			@include bp(sml) {
@@ -465,6 +466,40 @@ body.plan-confirm{
 		padding: 50px 0 75px;
 		@include bp(sml) {
 			padding: 100px 0;
+		}
+	}
+}
+
+/********************
+** Login
+********************/
+.login-forgot{
+	width: 50%;
+	display: inline-block;
+	vertical-align: middle;
+	text-align: center;
+}
+
+.login-go-back{
+	text-align: right;
+    margin-top: 20px;
+	a{
+		display: block;
+		padding: 5px;
+		&:hover{
+			&:before{
+				margin-right: 8px;
+			}
+		}
+		&:before{
+			content: "";
+			display: inline-block;
+			border-right: 8px solid $c-white;
+			border-bottom: 4px solid transparent;
+			border-top: 4px solid transparent;
+			vertical-align: middle;
+			margin-right: 5px;
+			@include transition(margin-right .25s linear);
 		}
 	}
 }

@@ -1002,6 +1002,7 @@ nav.main-nav a:after {
 #home .header .home-nav-link {
   display: block;
   padding: 5px;
+  text-decoration: none;
 }
 #home .header .home-nav-link:hover:after {
   margin-left: 8px;
@@ -1025,7 +1026,7 @@ nav.main-nav a:after {
   max-width: 425px;
   width: 90%;
   position: absolute;
-  top: 50%;
+  top: 55%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
   -moz-transform: translate(-50%, -50%);
@@ -1163,7 +1164,7 @@ body.dashboard .dashboard-banner {
 }
 body.dashboard .dashboard-banner .dashboard-banner-left {
   display: inline-block;
-  vertical-align: top;
+  vertical-align: middle;
   width: 100%;
   padding: 0 20px;
 }
@@ -1227,7 +1228,7 @@ body.dashboard .dashboard-banner .dashboard-banner-left span.dashboard-banner-su
 }
 body.dashboard .dashboard-banner .dashboard-banner-right {
   display: inline-block;
-  vertical-align: top;
+  vertical-align: middle;
   width: 100%;
   margin-left: -5px;
   padding: 0 20px;
@@ -1239,6 +1240,7 @@ body.dashboard .dashboard-banner .dashboard-banner-right {
 }
 body.dashboard .dashboard-banner .dashboard-banner-logo {
   max-width: 200px;
+  max-height: 115px;
   padding: 15px 0;
   width: 50%;
 }
@@ -1465,6 +1467,42 @@ body.plan-confirm .dasbhoard-main-message {
   .billing-info .submit-contain {
     padding: 100px 0;
   }
+}
+
+/********************
+** Login
+********************/
+.login-forgot {
+  width: 50%;
+  display: inline-block;
+  vertical-align: middle;
+  text-align: center;
+}
+
+.login-go-back {
+  text-align: right;
+  margin-top: 20px;
+}
+.login-go-back a {
+  display: block;
+  padding: 5px;
+}
+.login-go-back a:hover:before {
+  margin-right: 8px;
+}
+.login-go-back a:before {
+  content: "";
+  display: inline-block;
+  border-right: 8px solid #FFFFFF;
+  border-bottom: 4px solid transparent;
+  border-top: 4px solid transparent;
+  vertical-align: middle;
+  margin-right: 5px;
+  -webkit-transition: margin-right 0.25s linear;
+  -moz-transition: margin-right 0.25s linear;
+  -ms-transition: margin-right 0.25s linear;
+  -o-transition: margin-right 0.25s linear;
+  transition: margin-right 0.25s linear;
 }
 
 /********************
