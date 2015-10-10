@@ -288,9 +288,9 @@ body.dashboard{
 	}
 }
 /********************
-** Plan select page
+** Simple Dash banner pages
 ********************/
-body.plan-select,body.pay-select{
+body.plan-select,body.pay-select,body.enroll-complete{
 	.dashboard-banner{
 		.dashboard-banner-left{
 			border-right: none;
@@ -468,6 +468,59 @@ body.plan-confirm{
 		padding: 50px 0 75px;
 		@include bp(sml) {
 			padding: 100px 0;
+		}
+	}
+}
+
+/********************
+** Enrollment Complete
+********************/
+.enroll-complete{
+	.enroll-complete-content{
+		max-width: 900px;
+		margin: 0 auto;
+		padding: 25px;
+		text-align: center;
+		@include bp(sml) {
+			padding: 50px;
+		}
+		@include bp(med) {
+			padding: 60px;
+		}
+		
+		.enroll-complete-content-heading{
+			margin: 20px auto;
+			@include bp(sml) {
+				margin: 30px auto;
+			}
+			p{
+				@include font-size(22);
+				@include line-height(28);
+				font-weight: bolder;
+
+				@include bp(sml) {
+					@include font-size(32);
+					@include line-height(38);
+				}
+			}
+		}
+		.enroll-complete-content-main{
+			margin: 20px auto;
+			@include bp(sml) {
+				margin: 30px auto;
+			}
+			p{
+				@include font-size(18);
+				@include line-height(28);
+
+				@include bp(sml) {
+					@include font-size(24);
+					@include line-height(36);
+				}
+			}
+		}
+		a{
+			color: $c-white;
 		}
 	}
 }

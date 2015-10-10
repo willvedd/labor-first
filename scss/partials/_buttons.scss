@@ -35,6 +35,13 @@
 				background-color: rgba($c-green,1);
 			}
 		}
+		&.white{
+			background-color: rgba($c-white,.9);
+			color: $c-base;
+			&:hover{
+				background-color: rgba($c-white,1);
+			}
+		}
 		&.large{
 			padding: 15px 25px;	
 			border-radius: 50px;

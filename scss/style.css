@@ -834,6 +834,13 @@ figure {
 .btn.pill.green:hover {
   background-color: #27c085;
 }
+.btn.pill.white {
+  background-color: rgba(255, 255, 255, 0.9);
+  color: #3c3f41;
+}
+.btn.pill.white:hover {
+  background-color: white;
+}
 .btn.pill.large {
   padding: 15px 25px;
   border-radius: 50px;
@@ -1284,9 +1291,9 @@ body.dashboard .dashboard-main .dasbhoard-main-message p {
 }
 
 /********************
-** Plan select page
+** Simple Dash banner pages
 ********************/
-body.plan-select .dashboard-banner .dashboard-banner-left, body.pay-select .dashboard-banner .dashboard-banner-left {
+body.plan-select .dashboard-banner .dashboard-banner-left, body.pay-select .dashboard-banner .dashboard-banner-left, body.enroll-complete .dashboard-banner .dashboard-banner-left {
   border-right: none;
   width: 100%;
   text-align: center;
@@ -1467,6 +1474,74 @@ body.plan-confirm .dasbhoard-main-message {
   .billing-info .submit-contain {
     padding: 100px 0;
   }
+}
+
+/********************
+** Enrollment Complete
+********************/
+.enroll-complete .enroll-complete-content {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 25px;
+  text-align: center;
+}
+@media only screen and (min-width: 769px) {
+  .enroll-complete .enroll-complete-content {
+    padding: 50px;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .enroll-complete .enroll-complete-content {
+    padding: 60px;
+  }
+}
+.enroll-complete .enroll-complete-content .enroll-complete-content-heading {
+  margin: 20px auto;
+}
+@media only screen and (min-width: 769px) {
+  .enroll-complete .enroll-complete-content .enroll-complete-content-heading {
+    margin: 30px auto;
+  }
+}
+.enroll-complete .enroll-complete-content .enroll-complete-content-heading p {
+  font-size: 22px;
+  font-size: 1.375rem;
+  line-height: 28px;
+  line-height: 1.75rem;
+  font-weight: bolder;
+}
+@media only screen and (min-width: 769px) {
+  .enroll-complete .enroll-complete-content .enroll-complete-content-heading p {
+    font-size: 32px;
+    font-size: 2rem;
+    line-height: 38px;
+    line-height: 2.375rem;
+  }
+}
+.enroll-complete .enroll-complete-content .enroll-complete-content-main {
+  margin: 20px auto;
+}
+@media only screen and (min-width: 769px) {
+  .enroll-complete .enroll-complete-content .enroll-complete-content-main {
+    margin: 30px auto;
+  }
+}
+.enroll-complete .enroll-complete-content .enroll-complete-content-main p {
+  font-size: 18px;
+  font-size: 1.125rem;
+  line-height: 28px;
+  line-height: 1.75rem;
+}
+@media only screen and (min-width: 769px) {
+  .enroll-complete .enroll-complete-content .enroll-complete-content-main p {
+    font-size: 24px;
+    font-size: 1.5rem;
+    line-height: 36px;
+    line-height: 2.25rem;
+  }
+}
+.enroll-complete .enroll-complete-content a {
+  color: #FFFFFF;
 }
 
 /********************
