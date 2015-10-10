@@ -1755,6 +1755,19 @@ body.plan-confirm .dasbhoard-main-message {
 .dashboard-block-enrollment.unselected .enrollment-status-value {
   color: #f26c4f;
 }
+@media only screen and (min-width: 769px) {
+  .dashboard-block-enrollment.unselected .enrollment-status-value {
+    font-size: 38px;
+    font-size: 2.375rem;
+    line-height: 44px;
+    line-height: 2.75rem;
+  }
+}
+@media only screen and (min-width: 769px) {
+  .dashboard-block-enrollment.unselected .dashboard-block-label {
+    padding: 30px;
+  }
+}
 .dashboard-block-enrollment.unselected .dashboard-block-enrollment-inner {
   text-align: center;
 }

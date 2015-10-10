@@ -134,6 +134,15 @@
 	&.unselected{
 		.enrollment-status-value{
 			color: $c-red;
+			@include bp(sml) {
+				@include font-size(38);
+				@include line-height(44);
+			}
+		}
+		.dashboard-block-label{
+			@include bp(sml) {
+				padding: 30px;
+			}
 		}
 		.dashboard-block-enrollment-inner{
 			text-align: center;
