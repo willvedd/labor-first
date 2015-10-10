@@ -1286,7 +1286,7 @@ body.dashboard .dashboard-main .dasbhoard-main-message p {
 /********************
 ** Plan select page
 ********************/
-body.plan-select .dashboard-banner .dashboard-banner-left {
+body.plan-select .dashboard-banner .dashboard-banner-left, body.pay-select .dashboard-banner .dashboard-banner-left {
   border-right: none;
   width: 100%;
   text-align: center;
@@ -1466,6 +1466,34 @@ body.plan-confirm .dasbhoard-main-message {
 @media only screen and (min-width: 769px) {
   .billing-info .submit-contain {
     padding: 100px 0;
+  }
+}
+
+/********************
+** Payment Select
+********************/
+.pay-select .pay-select-contain {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 25px 25px 25px;
+  text-align: center;
+}
+@media only screen and (min-width: 769px) {
+  .pay-select .pay-select-contain {
+    padding: 0 50px 50px 50px;
+  }
+}
+.pay-select .pay-select-contain .btn {
+  margin: 10px auto;
+  display: block;
+  width: 95%;
+  max-width: 300px;
+}
+@media only screen and (min-width: 769px) {
+  .pay-select .pay-select-contain .btn {
+    width: 40%;
+    display: inline-block;
+    margin: 10px;
   }
 }
 

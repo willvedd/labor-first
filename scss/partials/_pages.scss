@@ -290,7 +290,7 @@ body.dashboard{
 /********************
 ** Plan select page
 ********************/
-body.plan-select{
+body.plan-select,body.pay-select{
 	.dashboard-banner{
 		.dashboard-banner-left{
 			border-right: none;
@@ -327,6 +327,8 @@ body.plan-confirm{
 		text-align: center;
 	}
 }
+
+
 
 /********************
 ** Two Column pages (billing, edit profile,contact,)
@@ -469,6 +471,33 @@ body.plan-confirm{
 		}
 	}
 }
+
+/********************
+** Payment Select
+********************/
+.pay-select{
+	.pay-select-contain{
+		max-width: 900px;
+		margin: 0 auto;
+		padding: 0 25px 25px 25px;
+		text-align: center;
+		@include bp(sml) {
+			padding: 0 50px 50px 50px;
+		}
+		.btn{
+			margin: 10px auto; 
+			display: block;
+			width: 95%;
+    		max-width: 300px;
+			@include bp(sml) {
+				width: 40%;
+				display: inline-block;
+				margin: 10px;
+			}
+		}
+	}
+}
+
 
 /********************
 ** Login
