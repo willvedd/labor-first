@@ -1519,11 +1519,11 @@ body.plan-confirm .dasbhoard-main-message {
   }
 }
 .enroll-complete .enroll-complete-content .enroll-complete-content-main {
-  margin: 20px auto;
+  margin: 35px auto;
 }
 @media only screen and (min-width: 769px) {
   .enroll-complete .enroll-complete-content .enroll-complete-content-main {
-    margin: 30px auto;
+    margin: 50px auto;
   }
 }
 .enroll-complete .enroll-complete-content .enroll-complete-content-main p {

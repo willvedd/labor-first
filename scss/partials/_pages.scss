@@ -505,9 +505,9 @@ body.plan-confirm{
 			}
 		}
 		.enroll-complete-content-main{
-			margin: 20px auto;
+			margin: 35px auto;
 			@include bp(sml) {
-				margin: 30px auto;
+				margin: 50px auto;
 			}
 			p{
 				@include font-size(18);
