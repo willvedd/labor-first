@@ -103,3 +103,38 @@ a.go-back{
 		}
 	}
 }
+
+a.social{
+	&:before{
+		display: inline-block;
+		vertical-align: middle;
+		font-family: $f-icons;
+		margin: 5px;
+		font-size:34px;
+
+		@include bp(sml) {
+			font-size: 36px;
+		}
+		@include bp(med) {
+			font-size: 40px;
+		}
+	}
+	&.faboo{
+		&:before{
+			content: "\f203";
+			color: #3b5998;
+		}
+	}
+	&.linke{
+		&:before{
+			content: "\f208";
+			color: #313335;
+		}
+	}
+	&.twit{
+		&:before{
+			content: "\f202";
+			color: #55acee;
+		}
+	}
+}

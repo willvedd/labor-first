@@ -401,7 +401,7 @@ th {
 }
 .cf:after, .clearfix:after {
   height: 0;
-  content: ".";
+  content: " ";
   display: block;
   clear: both;
   visibility: hidden;
@@ -910,6 +910,36 @@ a.go-back:hover:before {
   left: -4px;
 }
 
+a.social:before {
+  display: inline-block;
+  vertical-align: middle;
+  font-family: "Genericons";
+  margin: 5px;
+  font-size: 34px;
+}
+@media only screen and (min-width: 769px) {
+  a.social:before {
+    font-size: 36px;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  a.social:before {
+    font-size: 40px;
+  }
+}
+a.social.faboo:before {
+  content: "\f203";
+  color: #3b5998;
+}
+a.social.linke:before {
+  content: "\f208";
+  color: #313335;
+}
+a.social.twit:before {
+  content: "\f202";
+  color: #55acee;
+}
+
 /********************
 ** Navigation
 ********************/
@@ -951,6 +981,120 @@ nav.main-nav a:after {
 /********************
 ** Footer
 ********************/
+footer {
+  padding: 20px;
+  background-color: #FFFFFF;
+}
+@media only screen and (min-width: 769px) {
+  footer {
+    padding: 30px;
+  }
+}
+footer p {
+  font-size: 16px;
+  font-size: 1rem;
+  line-height: 20px;
+  line-height: 1.25rem;
+  max-width: 500px;
+  margin: 0 auto;
+}
+@media only screen and (min-width: 1024px) {
+  footer p {
+    margin: 0;
+  }
+}
+footer .footer-inner {
+  width: 95%;
+  margin: 0 auto;
+  max-width: 1170px;
+}
+footer .footer-left, footer .footer-right {
+  display: block;
+}
+@media only screen and (min-width: 1024px) {
+  footer .footer-left, footer .footer-right {
+    display: inline-block;
+    vertical-align: middle;
+    padding: 25px;
+  }
+}
+@media only screen and (min-width: 1390px) {
+  footer .footer-left, footer .footer-right {
+    padding: 30px;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  footer .footer-left {
+    width: 66.666%;
+    padding-left: 0;
+    border-right: 1px solid #3c3f41;
+  }
+}
+@media only screen and (min-width: 1390px) {
+  footer .footer-left {
+    padding-left: 0;
+  }
+}
+footer .footer-left .footer-logo, footer .footer-left .footer-contact {
+  display: block;
+}
+@media only screen and (min-width: 1024px) {
+  footer .footer-left .footer-logo, footer .footer-left .footer-contact {
+    display: inline-block;
+    vertical-align: middle;
+    width: 50%;
+    margin: 0 -3px;
+  }
+}
+footer .footer-left .footer-logo img {
+  max-width: 300px;
+  max-height: 70px;
+  margin: 0 auto;
+}
+footer .footer-left .footer-contact {
+  margin: 25px 0;
+}
+@media only screen and (min-width: 1024px) {
+  footer .footer-left .footer-contact {
+    margin: 0;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  footer .footer-right {
+    width: 33.333%;
+    margin-left: -5px;
+    padding-right: 0;
+  }
+}
+@media only screen and (min-width: 1390px) {
+  footer .footer-right {
+    padding-right: 0;
+  }
+}
+footer .footer-right .footer-social-intro, footer .footer-right .footer-social-contain {
+  margin: 0 auto;
+  text-align: center;
+}
+@media only screen and (min-width: 1024px) {
+  footer .footer-right .footer-social-intro, footer .footer-right .footer-social-contain {
+    text-align: left;
+    width: 50%;
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0 -3px;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  footer .footer-right .footer-social-intro {
+    width: 40%;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  footer .footer-right .footer-social-contain {
+    width: 60%;
+  }
+}
+
 /********************
 ** Homepage
 ********************/
@@ -1409,6 +1553,46 @@ body.plan-confirm .dasbhoard-main-message {
 .edit-profile .profile-current-block p {
   margin: 20px 0;
 }
+.edit-profile.contact .column-left, .edit-profile.contact .split-bg-left {
+  width: 40%;
+}
+.edit-profile.contact .column-right, .edit-profile.contact .split-bg-right {
+  width: 60%;
+}
+.edit-profile.contact .contact-intro-text {
+  padding: 20px 0;
+}
+@media only screen and (min-width: 769px) {
+  .edit-profile.contact .contact-intro-text {
+    font-size: 20px;
+    font-size: 1.25rem;
+    line-height: 24px;
+    line-height: 1.5rem;
+  }
+}
+.edit-profile.contact .contact-info-block {
+  border-bottom: 1px solid #b7b7b7;
+  padding: 20px 0;
+}
+@media only screen and (min-width: 769px) {
+  .edit-profile.contact .contact-info-block {
+    padding: 30px 0;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .edit-profile.contact .contact-info-block {
+    padding: 40px 0;
+  }
+}
+.edit-profile.contact .contact-info-block:last-of-type {
+  border-bottom: none;
+}
+.edit-profile.contact .contact-info-block h2 {
+  color: #00519b;
+  text-decoration: underline;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
 
 /********************
 ** Billing Info
@@ -1482,17 +1666,12 @@ body.plan-confirm .dasbhoard-main-message {
 .enroll-complete .enroll-complete-content {
   max-width: 900px;
   margin: 0 auto;
-  padding: 25px;
+  padding: 15vh 35px;
   text-align: center;
-}
-@media only screen and (min-width: 769px) {
-  .enroll-complete .enroll-complete-content {
-    padding: 50px;
-  }
 }
 @media only screen and (min-width: 1024px) {
   .enroll-complete .enroll-complete-content {
-    padding: 60px;
+    padding: 17vh 60px;
   }
 }
 .enroll-complete .enroll-complete-content .enroll-complete-content-heading {
@@ -1608,6 +1787,46 @@ body.plan-confirm .dasbhoard-main-message {
   transition: margin-right 0.25s linear;
 }
 
+.four04 .four04-main-message {
+  padding: 50px 0;
+}
+@media only screen and (min-width: 1024px) {
+  .four04 .four04-main-message {
+    padding: 70px 0;
+  }
+}
+.four04 .four04-content-top {
+  border-bottom: 2px solid #3c3f41;
+  padding-bottom: 50px;
+}
+@media only screen and (min-width: 769px) {
+  .four04 .four04-content-top {
+    padding-bottom: 60px;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .four04 .four04-content-top {
+    padding-bottom: 70px;
+  }
+}
+.four04 .four04-content-top a {
+  font-weight: bold;
+}
+.four04 .four04-content-top p.four04-message {
+  font-size: 22px;
+  font-size: 1.375rem;
+  line-height: 30px;
+  line-height: 1.875rem;
+}
+@media only screen and (min-width: 769px) {
+  .four04 .four04-content-top p.four04-message {
+    font-size: 24px;
+    font-size: 1.5rem;
+    line-height: 38px;
+    line-height: 2.375rem;
+  }
+}
+
 /********************
 ** General dashboard block class
 ********************/
@@ -1671,6 +1890,9 @@ body.plan-confirm .dasbhoard-main-message {
   margin: 0 20px;
   border-bottom: 1px solid #b7b7b7;
 }
+.dashboard-profile .profile-section:last-of-type {
+  border-bottom: none;
+}
 .dashboard-profile .profile-item {
   font-size: 18px;
   font-size: 1.125rem;
@@ -1707,6 +1929,17 @@ body.plan-confirm .dasbhoard-main-message {
 .dashboard-block-suport {
   color: #00519b;
   text-align: center;
+  margin: 20px 0;
+}
+@media only screen and (min-width: 769px) {
+  .dashboard-block-suport {
+    margin: 35px 0;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .dashboard-block-suport {
+    margin: 50px 0;
+  }
 }
 .dashboard-block-suport .support-headline {
   font-size: 32px;
@@ -1804,6 +2037,7 @@ article.plan-block .plan-block-header .plan-title {
   line-height: 20px;
   line-height: 1.25rem;
   letter-spacing: 0.025em;
+  width: calc(100% - 110px);
 }
 article.plan-block .plan-block-inner, article.plan-block .plan-block-pharm-deduct {
   padding: 25px;
@@ -1812,7 +2046,7 @@ article.plan-block .plan-block-inner, article.plan-block .plan-block-pharm-deduc
 }
 @media only screen and (min-width: 769px) {
   article.plan-block .plan-block-inner {
-    min-height: 275px;
+    min-height: 225px;
     height: auto;
   }
 }
@@ -1883,10 +2117,10 @@ article.plan-block .plan-block-ribbon {
 }
 @media only screen and (min-width: 769px) {
   article.plan-block .plan-block-ribbon {
-    border: 1px solid #13b6eb;
     position: absolute;
     width: 115px;
     right: 10px;
+    border-bottom: none;
   }
 }
 @media only screen and (min-width: 1024px) {
@@ -1894,9 +2128,21 @@ article.plan-block .plan-block-ribbon {
     right: 25px;
   }
 }
-article.plan-block .plan-block-ribbon:after, article.plan-block .plan-block-ribbon:before {
-  content: "";
-  display: block;
+@media only screen and (min-width: 769px) {
+  article.plan-block .plan-block-ribbon ul {
+    border: 1px solid #13b6eb;
+    border-bottom: none;
+    margin-bottom: -20px;
+  }
+}
+article.plan-block .plan-block-ribbon .ribbon-end {
+  display: none;
+}
+@media only screen and (min-width: 769px) {
+  article.plan-block .plan-block-ribbon .ribbon-end {
+    display: block;
+    width: 100%;
+  }
 }
 article.plan-block .plan-block-ribbon li {
   padding: 5px;
@@ -2098,152 +2344,6 @@ article.plan-block.selectable .dashboard-block-cta-bottom {
 }
 
 /********************
-** Footer
-********************/
-footer {
-  padding: 20px;
-  background-color: #FFFFFF;
-}
-@media only screen and (min-width: 769px) {
-  footer {
-    padding: 30px;
-  }
-}
-footer p {
-  font-size: 16px;
-  font-size: 1rem;
-  line-height: 20px;
-  line-height: 1.25rem;
-  max-width: 500px;
-  margin: 0 auto;
-}
-@media only screen and (min-width: 1024px) {
-  footer p {
-    margin: 0;
-  }
-}
-footer .footer-inner {
-  width: 95%;
-  margin: 0 auto;
-  max-width: 1170px;
-}
-footer .footer-left, footer .footer-right {
-  display: block;
-}
-@media only screen and (min-width: 1024px) {
-  footer .footer-left, footer .footer-right {
-    display: inline-block;
-    vertical-align: middle;
-    padding: 25px;
-  }
-}
-@media only screen and (min-width: 1390px) {
-  footer .footer-left, footer .footer-right {
-    padding: 30px;
-  }
-}
-@media only screen and (min-width: 1024px) {
-  footer .footer-left {
-    width: 66.666%;
-    padding-left: 0;
-    border-right: 1px solid #3c3f41;
-  }
-}
-@media only screen and (min-width: 1390px) {
-  footer .footer-left {
-    padding-left: 0;
-  }
-}
-footer .footer-left .footer-logo, footer .footer-left .footer-contact {
-  display: block;
-}
-@media only screen and (min-width: 1024px) {
-  footer .footer-left .footer-logo, footer .footer-left .footer-contact {
-    display: inline-block;
-    vertical-align: middle;
-    width: 50%;
-    margin: 0 -3px;
-  }
-}
-footer .footer-left .footer-logo img {
-  max-width: 300px;
-  max-height: 70px;
-  margin: 0 auto;
-}
-footer .footer-left .footer-contact {
-  margin: 25px 0;
-}
-@media only screen and (min-width: 1024px) {
-  footer .footer-left .footer-contact {
-    margin: 0;
-  }
-}
-@media only screen and (min-width: 1024px) {
-  footer .footer-right {
-    width: 33.333%;
-    margin-left: -5px;
-    padding-right: 0;
-  }
-}
-@media only screen and (min-width: 1390px) {
-  footer .footer-right {
-    padding-right: 0;
-  }
-}
-footer .footer-right .footer-social-intro, footer .footer-right .footer-social-contain {
-  margin: 0 auto;
-  text-align: center;
-}
-@media only screen and (min-width: 1024px) {
-  footer .footer-right .footer-social-intro, footer .footer-right .footer-social-contain {
-    text-align: left;
-    width: 50%;
-    display: inline-block;
-    vertical-align: middle;
-    margin: 0 -3px;
-  }
-}
-@media only screen and (min-width: 1024px) {
-  footer .footer-right .footer-social-intro {
-    width: 40%;
-  }
-}
-@media only screen and (min-width: 1024px) {
-  footer .footer-right .footer-social-contain {
-    width: 60%;
-  }
-}
-footer .footer-right a.social:before {
-  display: inline-block;
-  vertical-align: middle;
-  font-family: "Genericons";
-  margin: 5px;
-  font-size: 34px;
-}
-@media only screen and (min-width: 769px) {
-  footer .footer-right a.social:before {
-    font-size: 36px;
-  }
-}
-@media only screen and (min-width: 1024px) {
-  footer .footer-right a.social:before {
-    font-size: 40px;
-  }
-}
-footer .footer-right a.social.faboo:before {
-  content: "\f203";
-  color: #3b5998;
-}
-footer .footer-right a.social.linke:before {
-  content: "\f208";
-  color: #313335;
-}
-footer .footer-right a.social.twit:before {
-  content: "\f202";
-  color: #55acee;
-}
-
-/********************
 ** Inputs Login
 ********************/
 .label-standard {
@@ -2387,4 +2487,27 @@ label.input-dash-bool .actual-label {
   font-size: 15px;
   font-size: 0.9375rem;
   padding-left: 15px;
+}
+
+/********************
+** Dropdown
+********************/
+.dropdown-wrap {
+  position: relative;
+}
+.dropdown-wrap:after {
+  content: "\f502";
+  display: block;
+  position: absolute;
+  right: 25px;
+  top: 50%;
+  font-size: 20px;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  transform: translateY(-50%);
+  font-family: "Genericons";
+  color: #3c3f41;
+  height: 20px;
 }

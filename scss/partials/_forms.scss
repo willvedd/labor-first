@@ -131,3 +131,22 @@ label.input-dash-bool{
 	}
 }
 
+/********************
+** Dropdown
+********************/
+.dropdown-wrap{
+	position: relative;
+
+	&:after{
+		content: "\f502";
+		display: block;
+		position: absolute;
+		right: 25px;
+		top: 50%;
+		font-size: 20px;
+		@include transform(translateY(-50%));
+		font-family: $f-icons;
+		color: $c-base;
+		height: 20px;
+	}
+}

@@ -411,7 +411,40 @@ body.plan-confirm{
 			margin: 20px 0;
 		}
 	}
-
+	&.contact{
+		.column-left,.split-bg-left{
+			width: 40%;
+		}
+		.column-right,.split-bg-right{
+			width: 60%;
+		}
+		.contact-intro-text{
+			padding: 20px 0;
+			@include bp(sml) {
+				@include font-size(20);
+				@include line-height(24);
+			}
+		}
+		.contact-info-block{
+			border-bottom: 1px solid $c-gray;
+			padding: 20px 0;
+			@include bp(sml) {
+				padding: 30px 0;
+			}
+			@include bp(med) {
+				padding: 40px 0;
+			}
+			&:last-of-type{
+				border-bottom: none;
+			}
+			h2{
+				color: $c-blue-dark;
+				text-decoration: underline;
+				font-weight: bold;
+				margin-bottom: 20px;
+			}
+		}
+	}
 }
 /********************
 ** Billing Info
@@ -479,13 +512,10 @@ body.plan-confirm{
 	.enroll-complete-content{
 		max-width: 900px;
 		margin: 0 auto;
-		padding: 25px;
+		padding: 15vh 35px;
 		text-align: center;
-		@include bp(sml) {
-			padding: 50px;
-		}
 		@include bp(med) {
-			padding: 60px;
+			padding: 17vh 60px;
 		}
 		
 		.enroll-complete-content-heading{
@@ -582,6 +612,36 @@ body.plan-confirm{
 			vertical-align: middle;
 			margin-right: 5px;
 			@include transition(margin-right .25s linear);
+		}
+	}
+}
+.four04{
+	.four04-main-message{
+		padding: 50px 0 ;
+		@include bp(med) {
+			padding: 70px 0;
+		}
+	}
+	.four04-content-top{
+		border-bottom: 2px solid $c-base;
+		padding-bottom: 50px;
+		@include bp(sml) {
+			padding-bottom: 60px;
+		}
+		@include bp(med) {
+			padding-bottom: 70px;
+		}
+		a{
+			font-weight: bold;
+		}
+		p.four04-message{
+			@include font-size(22);
+			@include line-height(30);
+
+			@include bp(sml) { 
+				@include font-size(24);
+				@include line-height(38);
+			}
 		}
 	}
 }
