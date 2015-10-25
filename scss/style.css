@@ -1553,11 +1553,15 @@ body.plan-confirm .dasbhoard-main-message {
 .edit-profile .profile-current-block p {
   margin: 20px 0;
 }
-.edit-profile.contact .column-left, .edit-profile.contact .split-bg-left {
-  width: 40%;
+@media only screen and (min-width: 769px) {
+  .edit-profile.contact .column-left, .edit-profile.contact .split-bg-left {
+    width: 40%;
+  }
 }
-.edit-profile.contact .column-right, .edit-profile.contact .split-bg-right {
-  width: 60%;
+@media only screen and (min-width: 769px) {
+  .edit-profile.contact .column-right, .edit-profile.contact .split-bg-right {
+    width: 60%;
+  }
 }
 .edit-profile.contact .contact-intro-text {
   padding: 20px 0;
@@ -1592,6 +1596,10 @@ body.plan-confirm .dasbhoard-main-message {
   text-decoration: underline;
   font-weight: bold;
   margin-bottom: 20px;
+}
+.edit-profile.contact .input-dash {
+  color: #00519b;
+  font-weight: bold;
 }
 
 /********************
@@ -1824,6 +1832,58 @@ body.plan-confirm .dasbhoard-main-message {
     font-size: 1.5rem;
     line-height: 38px;
     line-height: 2.375rem;
+  }
+}
+
+.faq .faq-contain {
+  width: 95%;
+  max-width: 930px;
+  margin: 0 auto;
+  padding: 50px 0;
+}
+.faq .faq-contain .faq-question {
+  margin: 10px 0 20px 0px;
+}
+.faq .faq-contain span.faq-q {
+  display: inline-block;
+  vertical-align: middle;
+  font-weight: bold;
+  color: #00519b;
+  font-size: 20px;
+  font-size: 1.25rem;
+  padding-right: 5px;
+}
+.faq .faq-contain h2 {
+  display: inline-block;
+  vertical-align: middle;
+  font-weight: bold;
+  color: #13b6eb;
+  font-size: 20px;
+  font-size: 1.25rem;
+  margin: 0;
+}
+.faq .faq-contain p {
+  font-size: 17px;
+  font-size: 1.0625rem;
+  line-height: 24px;
+  line-height: 1.5rem;
+  margin-top: 10px;
+}
+@media only screen and (min-width: 769px) {
+  .faq .faq-contain p {
+    font-size: 18px;
+    font-size: 1.125rem;
+    line-height: 28px;
+    line-height: 1.75rem;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .faq .faq-contain p {
+    margin-top: 15px;
+    font-size: 20px;
+    font-size: 1.25rem;
+    line-height: 30px;
+    line-height: 1.875rem;
   }
 }
 
@@ -2455,13 +2515,27 @@ label.input-dash input, label.input-dash select, label.input-dash textarea {
   letter-spacing: 0.025em;
   margin-bottom: 15px;
 }
+label.input-dash.third {
+  padding-left: 0;
+  padding-right: 19px;
+  display: inline-block;
+  width: 33.333%;
+  margin-right: -10px;
+  white-space: nowrap;
+}
 
 label.input-dash-bool {
   display: inline-block;
   vertical-align: middle;
-  width: 50%;
   margin-left: -3px;
   margin-bottom: 15px;
+  width: 100%;
+}
+@media only screen and (min-width: 1024px) {
+  label.input-dash-bool {
+    width: 50%;
+    white-space: nowrap;
+  }
 }
 label.input-dash-bool input {
   display: inline-block;

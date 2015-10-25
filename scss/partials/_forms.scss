@@ -101,13 +101,25 @@ label.input-dash{
 		@include letter-spacing(25);
 		margin-bottom: 15px;
 	}
+	&.third{
+		padding-left: 0;
+		padding-right: 19px;
+		display: inline-block;
+		width: 33.333%;
+		margin-right: -10px;
+		white-space: nowrap;
+	}
 }
 label.input-dash-bool{
 	display: inline-block;
 	vertical-align: middle;
-	width: 50%;
 	margin-left: -3px;
 	margin-bottom: 15px;
+	width: 100%;
+	@include bp(med) {
+		width: 50%;
+		white-space: nowrap;
+	}
 	input{
 		display: inline-block;
 		vertical-align: middle;

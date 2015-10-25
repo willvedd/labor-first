@@ -413,10 +413,15 @@ body.plan-confirm{
 	}
 	&.contact{
 		.column-left,.split-bg-left{
-			width: 40%;
+			@include bp(sml) {
+				width: 40%;
+			}
+			
 		}
 		.column-right,.split-bg-right{
-			width: 60%;
+			@include bp(sml) {
+				width: 60%;
+			}
 		}
 		.contact-intro-text{
 			padding: 20px 0;
@@ -443,6 +448,10 @@ body.plan-confirm{
 				font-weight: bold;
 				margin-bottom: 20px;
 			}
+		}
+		.input-dash{
+			color: $c-blue-dark;
+			font-weight: bold;
 		}
 	}
 }
@@ -645,5 +654,46 @@ body.plan-confirm{
 		}
 	}
 }
+.faq{
+	.faq-contain{
+		width: 95%;
+		max-width: 930px;
+		margin: 0 auto;
+		padding: 50px 0;
+		.faq-question{
+			margin: 10px 0 20px 0px;
+		}
+		span.faq-q{
+			display: inline-block;
+			vertical-align: middle;
+			font-weight: bold;
+			color: $c-blue-dark;
+			@include font-size(20);
+			padding-right: 5px;
+		}
+		h2{
+			display: inline-block;
+			vertical-align: middle;
+			font-weight: bold;
+			color: $c-blue-light;
+			@include font-size(20);
+			margin: 0;
+		}
+		p{
+			@include font-size(17);
+			@include line-height(24);
+			margin-top: 10px;
+			@include bp(sml) {
+				@include font-size(18);
+				@include line-height(28);
+			}
+			@include bp(med) {
+				margin-top: 15px;
+				@include font-size(20);
+				@include line-height(30);
+			}
+		}
 
+	}
+}
 
