@@ -25,12 +25,12 @@
 
 			<label class="input-first label-standard" for="first_name">Email Address
 				<span class="input-focus"></span>
-				<input class="" type="email" oninput="change()" onfocus="focusThis()" data-type="email" name="email" placeholder="Enter your email" required>
+				<input class="" type="email" onchange="change(event)" oninput="change(event)" onfocus="focusThis(event)" data-type="email" name="email" placeholder="Enter your email" required>
 				<span class="input-status"></span>
 			</label>
 			<label class="input-last label-standard" for="first_name">Password
 				<span class="input-focus"></span>
-				<input class="" type="password"  oninput="change()" onfocus="focusThis()" data-type="password" name="password" placeholder="Enter password" required>
+				<input class="" type="password" onchange="change(event)" oninput="change(event)" onfocus="focusThis(event)" data-type="password" name="password" placeholder="Enter password" required>
 				<span class="input-status"></span>
 			</label>
 			<div class="login-bottom">
@@ -49,15 +49,15 @@
 </body>
 <script type="text/javascript">
 	
-function focusThis(){
-	var target = event.target.parentElement;
+function focusThis(e){
+	var target = e.target.parentElement;
 	$('.label-standard').removeClass('focus');
 	$(target).addClass('focus');
 }
-function change(){
-	var type = event.target.dataset.type;
-	var value = event.target.value;
-	var target = event.target.parentElement;
+function change(e){
+	var type = e.target.dataset.type;
+	var value = e.target.value;
+	var target = e.target.parentElement;
 
 	if(type === "name"){
 		if( value.length >0 && isNaN(parseFloat(value)) && !isFinite(value) ){
@@ -80,8 +80,7 @@ function change(){
 		}
 	}
 	else if(type ==="email") {
-		var re = /^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/i;
-		if( re.test(value) ){
+		if( value.indexOf("@") > 0 ){
 			$(target).removeClass('invalid');
 			$(target).addClass('valid');
 		}
@@ -92,7 +91,7 @@ function change(){
 	}
 	else if(type ==="password") {
 		var re = /^(?=.*\d).{8,24}$/;
-		if(event.target.name == 'password-confirm'){
+		if(e.target.name == 'password-confirm'){
 			if( re.test(value) && value == $('input[name="password"]')[0].value){
 				$(target).removeClass('invalid');
 				$(target).addClass('valid');
